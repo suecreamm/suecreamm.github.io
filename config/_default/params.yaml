@@ -38,7 +38,7 @@ header:
     logo:
       text: ""
       # Logo filename in `assets/media/` folder
-      filename: "logo.svg"
+      filename: "" #"logo.svg"
     button:
       enable: true
       text: "Get Started"
@@ -49,7 +49,7 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year} My Company. This work is licensed under {license}'
+    notice: '© {year} Suecream. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -64,7 +64,7 @@ locale:
 # Site features
 features:
   math:
-    enable: false
+    enable: true
   privacy_pack:
     enable: false
   repository:

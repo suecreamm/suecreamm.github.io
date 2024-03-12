@@ -78,7 +78,7 @@ features:
   comment:
     provider: ''
     giscus:
-      repo: ''
-      repo_id: ''
-      category: ''
-      category_id: ''
+      repo: 'suecreamm/suecreamm.github.io'
+      repo_id: 'R_kgDOLeN49Q'
+      category: 'Announcements'
+      category_id: 'DIC_kwDOLeN49c4Cd60Y'

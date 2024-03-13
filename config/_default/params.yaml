@@ -36,7 +36,7 @@ header:
     align: "center"
     fixed_to_top: true
     logo:
-      text: ""
+      text: "Suecream-Docs"
       # Logo filename in `assets/media/` folder
       filename: "" #"logo.svg"
     button:
@@ -76,7 +76,7 @@ features:
       positive: 'Glad to hear it! [Any ideas for improvements?](https://github.com/<USERNAME>/<REPO>/issues/new).'
       negative: 'Sorry to hear that. [Please tell us how we can improve](https://github.com/<USERNAME>/<REPO>/issues/new).'
   comment:
-    provider: ''
+    provider: 'giscus'
     giscus:
       repo: 'suecreamm/suecreamm.github.io'
       repo_id: 'R_kgDOLeN49Q'

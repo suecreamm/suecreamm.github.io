@@ -12,9 +12,9 @@ appearance:
 marketing:
   seo:
     site_type: Project
-    local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo documentation theme powered by Hugo Blox website builder.'
+    local_business_type: 'Research'
+    org_name: 'Hwang Suehyeon'
+    description: 'Talks about PhD degree in physics' 
     twitter: ''
   analytics:
     google_analytics: ''

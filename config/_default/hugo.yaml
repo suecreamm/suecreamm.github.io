@@ -3,7 +3,7 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: "Suecream Docs" # Website name
+title: "Suecrify" # Website name
 baseURL: 'https://suecreamm.github.io' # Website URL
 
 ############################
@@ -33,7 +33,7 @@ cascade:
     show_related: true
     share: true
     # Just use Breadcrumb for navigation on blog post pages?
-    show_breadcrumb: false
+    show_breadcrumb: true
     header:
       navbar:
         enable: true

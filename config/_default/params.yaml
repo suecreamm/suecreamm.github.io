@@ -82,3 +82,11 @@ features:
       repo_id: 'R_kgDOLeN49Q'
       category: 'Announcements'
       category_id: 'DIC_kwDOLeN49c4Cd60Y'
+
+
+# CMS
+extensions:
+  decap_cms:
+    branch: main
+#     publish_mode: editorial_workflow
+#     local_backend: true

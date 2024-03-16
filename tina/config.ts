@@ -57,6 +57,39 @@ export default defineConfig({
             isBody: true,
           },
         ],
-      },],
+      },
+
+      {
+        name: "en",
+        label: "En",
+        path: "content/en",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "linkTitle",
+            label: "LinkTitle",
+          },
+          {
+            type: "boolean",
+            name: "commentable",
+            label: "Commentable",
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+        ],
+      },
+    
+    ],
   },
 });

@@ -4,8 +4,7 @@ linkTitle: Bake Out
 commentable: true
 ---
 
-Bake out은 진공 장비를 가열해 더 빠르게 좋은 진공
- 환경을 만드는 방법이다.
+Bake out은 진공 장비를 가열해 더 빠르게 고진공을 만드는 방법이다.
 
 <!--more-->
 

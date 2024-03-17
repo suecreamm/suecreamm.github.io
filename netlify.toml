@@ -6,7 +6,6 @@
   HUGO_VERSION = "0.122.0"
   HUGO_ENABLEGITINFO = "true"
   GO_VERSION = "1.21.0"
-  HUGO_BASEURL = "/"
 
 [context.production.environment]
   HUGO_ENV = "production"

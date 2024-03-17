@@ -4,6 +4,7 @@
   "description": "[![Screenshot](./.github/preview.png)](https://hugoblox.com/templates/details/docs/)",
   "main": "index.js",
   "scripts": {
+    "tinacms": "tinacms",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

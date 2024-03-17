@@ -1,22 +1,23 @@
 [build]
-  command = "tinacms build && hugo --gc --minify -b $URL && npx pagefind --source 'public'"
   publish = "public"
+  command = "npx tinacms build && hugo --gc --minify -b $URL && npx pagefind --source 'public'"
 
 [build.environment]
   HUGO_VERSION = "0.123.7"
-  HUGO_ENABLEGITINFO = "true"
+  #HUGO_ENABLEGITINFO = "true"
   GO_VERSION = "1.22.1"
+  HUGO_BASEURL = "/"
 
-[context.production.environment]
-  HUGO_ENV = "production"
+#[context.production.environment]
+  #HUGO_ENV = "production"
 
-[context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+#[context.deploy-preview]
+  #command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
-[context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+#[context.branch-deploy]
+  #command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
-[[plugins]]
-  package = "netlify-plugin-hugo-cache-resources"
-  [plugins.inputs]
-    debug = true
+#[[plugins]]
+  #package = "netlify-plugin-hugo-cache-resources"
+  #[plugins.inputs]
+    #debug = true

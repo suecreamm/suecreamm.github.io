@@ -50,7 +50,8 @@ jobs:
       env:
         TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
         TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-      run: npx tinacms build
+        TINA_TOKEN_SEARCH: ${{ secrets.TINA_TOKEN_SEARCH }}
+      run: npx tinacms dev
 
     - name: Build with Hugo
       env:

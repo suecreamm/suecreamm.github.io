@@ -3,7 +3,7 @@
   command = "npx tinacms build && hugo --gc --minify -b $URL && npx pagefind --source 'public'"
 
 [build.environment]
-  HUGO_VERSION = "0.122.7"
+  HUGO_VERSION = "0.122.0"
   HUGO_ENABLEGITINFO = "true"
   GO_VERSION = "1.22.1"
   HUGO_BASEURL = "/"

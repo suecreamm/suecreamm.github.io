@@ -58,13 +58,6 @@ jobs:
       uses: actions/upload-pages-artifact@v2
       with:
         path: ./public
-        
-    - name: Build TinaCMS
-      env:
-        TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
-        TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        TINA_TOKEN_SEARCH: ${{ secrets.TINA_TOKEN_SEARCH }}
-      run: npx tinacms build
 
   # Deploy website to GitHub Pages hosting
   deploy:

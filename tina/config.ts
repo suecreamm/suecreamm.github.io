@@ -1,14 +1,16 @@
 import { defineConfig } from "tinacms";
 
-// Your hosting provider likely exposes this as an environment variable
-const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
+const branch =
+  process.env.GITHUB_BRANCH ||
+  process.env.VERCEL_GIT_COMMIT_REF ||
+  process.env.HEAD ||
+  "main";
 
 export default defineConfig({
   branch,
-  clientId: null ||
-  process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  token: null ||
-  process.env.TINA_TOKEN,
+
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  token: process.env.TINA_TOKEN,
 
   build: {
     outputFolder: "admin",
@@ -17,9 +19,10 @@ export default defineConfig({
   media: {
     tina: {
       mediaRoot: "",
-      publicFolder: "static",
+      publicFolder: "static/uploads",
     },
   },
+  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
       {
@@ -35,11 +38,20 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "string",
+            name: "summary",
+            label: "Summary",
+          },
+          {
+            type: "datetime",
+            name: "date",
+            label: "Date",
+          },
+          {
             name: 'draft',
             label: 'Draft',
             type: 'boolean',
             required: true,
-            description: 'If this is checked the post will not be published',
           },
           {
             name: 'commentable',

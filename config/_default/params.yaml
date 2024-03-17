@@ -85,8 +85,8 @@ features:
 
 
 # CMS
-extensions:
-  decap_cms:
-    branch: main
+#extensions:
+#  decap_cms:
+#    branch: main
 #     publish_mode: editorial_workflow
 #     local_backend: true

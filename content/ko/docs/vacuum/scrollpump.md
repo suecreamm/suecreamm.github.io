@@ -38,7 +38,7 @@ dry air를 펌핑할 때에는 다이얼을 12시 방향으로 돌린다. On -> 
 ## 참고
 
 ### - Silencer
-![Silencer "Pfeiffer vacuum의 Silencer"](https://assets.tina.io/aab3b88e-75e9-464f-bc3a-5c8bf84731f8/ScrollPump-Silencer.jpg)
+![Silencer "Pfeiffer vacuum의 Silencer. DN25 NW25 사이즈를 쓴다."](https://assets.tina.io/aab3b88e-75e9-464f-bc3a-5c8bf84731f8/ScrollPump-Silencer.jpg)
 소리를 줄여주고, 스크롤과 tip seal이 마모되면서 생기는 철가루와 먼지를 걸러주는 역할을 한다. 9000 시간(=375일) 이상 사용하면 교체하는 것이 좋다고 한다.
 
 ### - 진공이 안 빠져요

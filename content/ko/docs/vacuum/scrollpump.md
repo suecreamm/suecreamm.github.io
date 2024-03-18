@@ -1,6 +1,6 @@
 ---
-linkTitle: scrollpump
-title: Scroll Pump (대기압 - 1E-03 torr)
+linkTitle: Scroll Pump (대기압 - 1E-03 torr)
+title: Scroll Pump 
 summary: Scroll Pump의 원리와 사용 방법. tip seal, silencer, filter에 관한 내용과 교체 주기.
 draft: false
 commentable: true

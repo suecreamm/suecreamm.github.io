@@ -30,7 +30,7 @@ Bake out을 할 때에는 챔버 표면이 아주 뜨겁다. 절대 맨손으로
 
 장비 표면에 히팅테이프를 촘촘하게 두르고, 호일로 감싼다. 내부의 열선이 겹쳐지거나 꼬이지 않게 감고, 끝에 달려있는 고무줄을 써서 고정한다.나는 얼마나 빽빽하게 감아야 되는지 궁금했는데 적당히 밀도있게 하는 게 좋다고 들었다. 그러나 슬라이닥스가 부족해서 슬라이닥스 수만큼 감았다.
 
-![](/static/uploads/overall.jpg)
+![](./static/uploads/overall.jpg)
 
 ### Step 2
 
@@ -50,7 +50,7 @@ Bake out을 할 때에는 챔버 표면이 아주 뜨겁다. 절대 맨손으로
 
 ### 펌프와 진공게이지
 
-![](/static/uploads/vacuum.jpg)
+![](./static/uploads/vacuum.jpg)
 
 진공 게이지를 보면서 압력이 어떻게 변하는지 확인한다.
 
@@ -60,24 +60,24 @@ Bake out을 할 때에는 챔버 표면이 아주 뜨겁다. 절대 맨손으로
 
 #### 정리방법
 
-![](/static/uploads/Heating_tape_01.jpg)
+![](./static/uploads/Heating_tape_01.jpg)
 
 사실 실험실에는 널브러져 있어서 몰랐는데 새로 산 것 포장 상태를 보고 정리 방법을 배웠다! 동그랗게 말아서 고무줄로 묶어주면 깔끔하게 정리할 수 있다.
 
 ### 호일
 
-![](/static/uploads/foil_tape.jpg)
+![](./static/uploads/foil_tape.jpg)
 
 보일러나 전기장판을 켜놓고 이불을 펼쳐놓는 것만 생각했으나 스테인리스는 열전도도가 안 좋기 때문에 알루미늄으로 히팅 테이프의 열을 전달하는 역할도 한다고 배웠다.
 
 ### 슬라이닥스
 
-![](/static/uploads/slidacs01.jpg)
+![](./static/uploads/slidacs01.jpg)
 
 출력 전압을 0부터 조절할 수 있게 하는 도구.
 
 ### 온도계
 
-![](/static/uploads/thermo.jpg)
+![](./static/uploads/thermo.jpg)
 
 멀티미터의 온도계 모양에 놓고 온도를 잰다. 온도는 열선이 없는 곳을 측정한다. 내부 온도와 외부 온도가 다르기 때문에 챔버 표면 온도를 200도 정도로 하는 사람도 있다고 한다.

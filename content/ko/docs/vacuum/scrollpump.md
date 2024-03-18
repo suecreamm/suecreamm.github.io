@@ -16,16 +16,16 @@ commentable: true
 스크롤 펌프는 움직이는 스크롤 하나와 고정된 스크롤 하나가 진공을 만들어주는 펌프이다. 단어 그대로 두루마리가 말린 모양으로, 틈 사이로 공기가 빠져 나간다. 모기향처럼 생긴 tip seal이라는 것을 교체하면서 쓴다. 
 
 
-## 과정
+## 조작과정
 
 {{% steps %}}
 
 ### 전원을 연결하고 Start 버튼을 누른다.
 
-### (진공을 깬 적 없으면 생략 가능) Gas Ballast On 상태에서 펌핑한다.
+### (진공을 깬 적 없으면 생략 가능) Gas Ballast On 상태에서 Wet air를 펌핑한다.
 다이얼을 돌리면 Gas ballast on 상태가 되면서 소리가 시끄럽게 바뀐다. 이 모드는 대기 중에 노출되었거나 수분이 많은 wet air를 펌핑할 때에 쓴다. 공기 중에 오래 노출되었다면 20분 이상 켜놓고 다음 단계로 넘어간다.
 
-### Gas Ballast Off 상태에서 펌핑한다.
+### Gas Ballast Off 상태에서 Dry air를 펌핑한다.
 dry air를 펌핑할 때에는 다이얼을 12시 방향으로 돌린다. On -> Off 상태로 바뀌면 소리가 조용해진다. 더 낮은 진공에 도달할 수 있다.
 
 ### 적당한 진공에 도달하면 터보 펌프를 켠다.
@@ -35,7 +35,9 @@ dry air를 펌핑할 때에는 다이얼을 12시 방향으로 돌린다. On -> 
 {{% /steps %}}
 
 
+
 ## 참고
+
 
 ### - Silencer
 ![Silencer "Pfeiffer vacuum의 Silencer. DN25 NW25 사이즈를 쓴다."](https://assets.tina.io/aab3b88e-75e9-464f-bc3a-5c8bf84731f8/ScrollPump-Silencer.jpg)

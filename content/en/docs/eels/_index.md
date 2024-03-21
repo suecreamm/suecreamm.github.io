@@ -1,5 +1,5 @@
 ---
-title: Guide
+title: EELS Installation
 weight: 2
 sidebar:
   open: true

@@ -66,8 +66,7 @@ sections:
       items:
         - name: Manuals
           icon: document-text
-          description: A to Z records in my research
-          url: https://hugoblox.com/templates/details/docs/
+          description: A to Z research records
         - name: Showcase
           icon: star
           description: Useful tools

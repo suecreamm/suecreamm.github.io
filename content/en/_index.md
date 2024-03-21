@@ -52,12 +52,12 @@ sections:
           #description: |
             #Discord community  
             #for support
-    design:
+    #design:
       # Section background color (CSS class)
-      css_class: "bg-gray-100 dark:bg-gray-800"
+      #css_class: "bg-gray-100 dark:bg-gray-800"
       # Reduce spacing
-      spacing:
-        padding: ["1rem", 0, "1rem", 0]
+      #spacing:
+        #padding: ["1rem", 0, "1rem", 0]
   - block: features
     id: features
     content:

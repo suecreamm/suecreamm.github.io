@@ -16,7 +16,7 @@ commentable: true
 ![](https://assets.tina.io/aab3b88e-75e9-464f-bc3a-5c8bf84731f8/scroll.png)
 스크롤 펌프는 움직이는 스크롤 하나와 고정된 스크롤 하나가 진공을 만들어주는 펌프이다. 단어 그대로 두루마리가 말린 모양으로, 틈 사이로 공기가 빠져 나간다. 가운데에 배기구가 있고, 이 틈 사이로 공기를 내보낸다.
 
-!\[Scroll pump "Scrolls are rolling"]\([https://assets.tina.io/aab3b88e-75e9-464f-bc3a-5c8bf84731f8/scroll\_pump.gif](https://assets.tina.io/aab3b88e-75e9-464f-bc3a-5c8bf84731f8/scroll_pump.gif))
+![Scroll pump "Scrolls are rolling"](\[/scroll_pump.gif]\(https://assets.tina.io/aab3b88e-75e9-464f-bc3a-5c8bf84731f8/scroll_pump.gif\))
 
 ## 조작과정
 
@@ -26,11 +26,13 @@ commentable: true
 
 ### (진공을 깬 적 없으면 생략 가능) Gas Ballast On 상태에서 Wet air를 펌핑한다.
 
-다이얼을 돌리면 Gas ballast on 상태가 되면서 소리가 시끄럽게 바뀐다. 이 모드는 대기 중에 노출되었거나 수분이 많은 wet air를 펌핑할 때에 쓴다. 공기 중에 오래 노출되었다면 20분 이상 켜놓고 다음 단계로 넘어간다.
+[!Scroll pump's dial "Gas ballast on and off"](\[https://assets.tina.io/aab3b88e-75e9-464f-bc3a-5c8bf84731f8/scroll_gas_ballast.jpg]\(https://assets.tina.io/aab3b88e-75e9-464f-bc3a-5c8bf84731f8/scroll_gas_ballast.jpg\))
+
+wet air를 펌핑할 때에는 다이얼이 9-11시 방향을 향하게 한다. 이 모드는 대기 중에 노출되었거나 수분이 많은 wet air를 펌핑할 때에 쓴다. 공기 중에 오래 노출되었다면 20분 이상 켜놓고 다음 단계로 넘어간다. 다이얼을 돌리면 Gas ballast on 상태가 되면서 소리가 시끄럽게 바뀐다.
 
 ### Gas Ballast Off 상태에서 Dry air를 펌핑한다.
 
-dry air를 펌핑할 때에는 다이얼을 12시 방향으로 돌린다. On -> Off 상태로 바뀌면 소리가 조용해진다. 더 낮은 진공에 도달할 수 있다.
+dry air를 펌핑할 때에는 다이얼을 12시 방향으로 돌린다. On -> Off 상태로 바뀌면 소리가 조용해진다. 더 좋은 진공(낮은 압력)에 도달할 수 있다.
 
 ### 적당한 진공에 도달하면 터보 펌프를 켠다.
 
@@ -47,7 +49,7 @@ dry air를 펌핑할 때에는 다이얼을 12시 방향으로 돌린다. On -> 
 
 ### - 진공이 안 빠져요
 
-진공이 잘 안 뽑히면서 소리가 이상하면 tip seal을 교체한다. 설명서 상에서는 1-3년에 한 번 바꿔줘야 하는 것 같다.
+진공이 잘 안 뽑히면서 소리가 이상하면 tip seal을 교체한다. 설명서 상에서는 1-3년에 한 번 바꿔줘야 하는 것 같다.
 
 ### - Stanby 모드
 

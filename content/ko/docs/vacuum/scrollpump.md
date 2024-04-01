@@ -2,7 +2,7 @@
 linkTitle: Scroll Pump (대기압 - 1E-03 torr)
 title: Scroll Pump
 summary: 'Scroll Pump의 원리와 사용 방법. tip seal, silencer, filter에 관한 내용과 교체 주기.'
-date: 2024-03-13T15:00:00.000Z
+date: 2024-03-29T15:00:00.000Z
 draft: false
 commentable: true
 ---
@@ -28,7 +28,7 @@ commentable: true
 
 ![Scroll-pump's-dial "Gas ballast on and off"](https://assets.tina.io/aab3b88e-75e9-464f-bc3a-5c8bf84731f8/scroll_gas_ballast.jpg)
 
-wet air를 펌핑할 때에는 다이얼이 9-11시 방향을 향하게 한다. 이 모드는 대기 중에 노출되었거나 수분이 많은 wet air를 펌핑할 때에 쓴다. 공기 중에 오래 노출되었다면 20분 이상 켜놓고 다음 단계로 넘어간다. 다이얼을 돌리면 Gas ballast on 상태가 되면서 소리가 시끄럽게 바뀐다.
+Gas Ballast On 상태로 펌핑하려면 다이얼이 9-11시 방향을 향하게 한다. 이 모드는 대기 중에 노출되었거나 수분이 많은 wet air를 펌핑할 때에 쓴다. 공기 중에 오래 노출되었다면 20분 이상 켜놓고 다음 단계로 넘어간다. On 상태로 다이얼을 돌리면 Gas ballast on 상태가 되면서 소리가 시끄럽게 바뀐다.
 
 ### Gas Ballast Off 상태에서 Dry air를 펌핑한다.
 

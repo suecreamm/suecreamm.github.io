@@ -5,18 +5,18 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Documentation
-    url: docs/
+  - name: 소개
+    url: about/
     weight: 20
-  - name: Blog
-    url: blog/
+  - name: 매뉴얼
+    url: docs/
     weight: 30
-  - name: Showcase
+#  - name: Blog
+#    url: blog/
+#    weight: 30
+  - name: 프로그램
     url: showcase/
     weight: 40
-  - name: About
-    url: about/
-    weight: 50
 
 sidebar:
   - identifier: more
@@ -30,5 +30,5 @@ sidebar:
     weight: 2
   - identifier: hugoDocs
     name: "Hugo Docs ↗"
-    url: "https://docs.hugoblox.com"
+    url: ""
     weight: 3

@@ -14,8 +14,8 @@ main:
   - name: Showcase
     url: showcase/
     weight: 40
-  - name: Community
-    url: community/
+  - name: About
+    url: about/
     weight: 50
 
 sidebar:

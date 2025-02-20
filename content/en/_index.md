@@ -14,15 +14,15 @@ sections:
       title: Features
       text: This is where I create...
       items:
-        - name: Manuals
+        - name: Docs
           icon: document-text
           description: A to Z research records
-        - name: Showcase
+        - name: Projects
           icon: star
           description: Useful tools
-        - name: About
+        - name: Blog
           icon: bolt
-          description: About me
+          description: Articles
         - name: About
           icon: rectangle-group
           description: About this site

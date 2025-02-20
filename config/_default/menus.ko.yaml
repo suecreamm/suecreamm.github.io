@@ -8,7 +8,7 @@ main:
   - name: About
     url: about/
     weight: 20
-  - name: 매뉴얼
+  - name: 문서
     url: docs/
     weight: 30
   - name: 블로그

@@ -24,10 +24,6 @@ sidebar:
     params:
       type: separator
     weight: 1
-  - identifier: community
-    name: "Community"
-    pageRef: "/community"
-    weight: 2
   - identifier: hugoDocs
     name: "Hugo Docs ↗"
     url: ""

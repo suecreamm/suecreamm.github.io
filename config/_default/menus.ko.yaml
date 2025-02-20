@@ -5,17 +5,17 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: 소개
+  - name: About
     url: about/
     weight: 20
   - name: 매뉴얼
     url: docs/
     weight: 30
-#  - name: Blog
-#    url: blog/
-#    weight: 30
-  - name: 프로그램
-    url: showcase/
+  - name: 블로그
+    url: blog/
+    weight: 30
+  - name: 프로젝트
+    url: projects/
     weight: 40
 
 sidebar:

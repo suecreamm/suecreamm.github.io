@@ -35,7 +35,7 @@ header:
       # Logo filename in `assets/media/` folder
       filename: "" #"logo.svg"
     button:
-      enable: true
+      enable: false
       text: "Get Started"
       url: "https://hugoblox.com/templates/details/docs/"
     show_search: true
@@ -44,7 +44,7 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Suecream. This work is licensed under {license}'
+    notice: '© {year} Suecreamm. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false

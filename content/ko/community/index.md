@@ -1,5 +1,5 @@
 ---
-title: Community
+title: About
 toc: true
 reading_time: false
 pager: false

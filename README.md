@@ -1,1 +1,2 @@
-# [Go to the website](https://suecream.netlify.app)
+
+[Go to the website](https://suecream.netlify.app)

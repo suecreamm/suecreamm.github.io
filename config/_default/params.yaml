@@ -9,7 +9,7 @@ marketing:
     site_type: Project
     local_business_type: 'Research'
     org_name: 'Hwang Suehyeon'
-    description: 'Talks about PhD degree in physics' 
+    description: 'Shares physics-related topics from my PhD studies' 
     twitter: ''
   analytics:
     google_analytics: ''
@@ -31,7 +31,7 @@ header:
     align: "center"
     fixed_to_top: true
     logo:
-      text: "Suecream"
+      text: "Suecreamm"
       # Logo filename in `assets/media/` folder
       filename: "" #"logo.svg"
     button:
@@ -63,7 +63,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/HugoBlox/hugo-blox-builder/'
+    url: ''
     content_dir: 'starters/documentation/content'
     branch: 'main'
   feedback:

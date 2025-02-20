@@ -12,7 +12,7 @@ main:
     url: blog/
     weight: 30
   - name: Projects
-    url: showcase/
+    url: projects/
     weight: 40
   - name: About
     url: about/

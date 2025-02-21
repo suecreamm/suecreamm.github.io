@@ -10,6 +10,11 @@ sections:
     content:
       title: Projects
       text: 'Tools and applications I created while trying to make research life easier.'
+      primary_action:
+        icon: brands/x
+        text: Submit Your Site
+        url: ""
+      
     design:
       no_padding: true
       spacing:

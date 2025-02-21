@@ -10,7 +10,7 @@ sections:
     content:
       title: Projects
       text: 'Tools and applications I created while trying to make research life easier
-    When a materials scientist decides to code - here's what happens'
+            When a materials scientist decides to code - here's what happens'
     design:
       no_padding: true
       spacing:

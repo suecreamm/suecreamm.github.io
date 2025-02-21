@@ -1,6 +1,6 @@
 ---
 title: Projects
-description: "Docs websites powered by Hugo Blox."
+description: "When a materials scientist decides to code - here's what happens."
 type: landing
 
 
@@ -9,8 +9,7 @@ sections:
   - block: hero
     content:
       title: Projects
-      text: 'Tools and applications I created while trying to make research life easier
-            When a materials scientist decides to code - here's what happens'
+      text: 'Tools and applications I created while trying to make research life easier.'
     design:
       no_padding: true
       spacing:

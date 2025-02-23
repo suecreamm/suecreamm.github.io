@@ -1,41 +1,64 @@
 ---
-title: v1.0.0 Released!
-summary: Hugo v1.0.0 released. Download now and follow the guide to get started in 5 minutes!
-date: 2023-01-01
-authors:
-  - admin
+title: "Spicing Up Research with Code 1: Carbon Nanotube Structure Generator Dev Diary (1)"
+date: 2023-12-27
+categories:
+ - Programming
 tags:
-  - Hugo
-  - Hugo Blox
-  - Markdown
-image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+ - Programming
+ - Materials
+ - Physics
+ - Web
+series:
+ - Spicing-Up-Research-with-Code
+enableToc: true
+enableTocContent: true
+summary: A web-based program that generates VASP POSCAR files for CNT structures. It automates complex calculations and creates structures with simple inputs - no installation required.
 ---
 
-Hugo v1.0.0 is now available! This release includes new experimental features to try out, improvements to accessibility, the ability for plugins to customize image optimization in Markdown, and many more improvements and bug fixes.
+# Spicing Up Research with Code 1: Carbon Nanotube Structure Generator Dev Diary (1)
 
-Highlights include:
+![program_thumb](/uploads/post/CNTnew_16_9.gif "program_thumb")
 
-- New config options
-- Improved accessibility
-- Customizable image optimization in Markdown
+Hey there! I've created a program that generates NxM CNT (Carbon Nanotube) structures in VASP format. Simply save the text file with a .VASP extension, and you can visualize your carbon nanotube using VESTA.
 
-Thank you to everyone who contributed to this release!
+![honey](/uploads/post/honey.png "honey")
 
-## New Features
+Think of a CNT as a sheet of graphene (carbon atoms arranged in hexagons) rolled into a cylinder - kind of like that cylindrical honeycomb structure above. I made sure to include vacuum space around the tube for VASP calculations.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae fringilla sem. Integer mattis dictum augue non auctor. Proin quis porttitor enim. Praesent vulputate arcu egestas scelerisque condimentum. Vivamus elit risus, suscipit et enim et, viverra molestie elit. Nulla ullamcorper nisl vel nisi pellentesque, id feugiat risus interdum. Duis consequat ipsum elit. Aenean hendrerit diam ipsum, a convallis magna congue et. Sed ex erat, pretium et ante id, malesuada luctus nibh. Nunc nec consectetur elit.
+## Why I Built It
 
-## Bug Fixes
+I tried several existing tools but ran into these frustrations:
+- Manual calculations were a real headache → So I automated them
+- Why install software when you just need a structure file? → Made it web-based
+- The manuals were so complicated - like reading research papers! → Simplified the inputs
+- Too many terminal commands and setup steps → Created a simple web interface
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae fringilla sem. Integer mattis dictum augue non auctor. Proin quis porttitor enim. Praesent vulputate arcu egestas scelerisque condimentum. Vivamus elit risus, suscipit et enim et, viverra molestie elit. Nulla ullamcorper nisl vel nisi pellentesque, id feugiat risus interdum. Duis consequat ipsum elit. Aenean hendrerit diam ipsum, a convallis magna congue et. Sed ex erat, pretium et ante id, malesuada luctus nibh. Nunc nec consectetur elit.
+## Cool Features
 
-## How to Upgrade
+### No Installation, Works Everywhere
+Since it's a web-based JS program, you don't need to install anything. Works on any operating system!
 
-Simply run the following command in your terminal:
+### Super Easy to Use
+![CNTG_web_Capture](/uploads/post/CNTwebCapture.jpg "CNTG_web_Capture")
 
-```bash
-hugo mod get -u github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind@main
-```
+Just two main inputs! Choose how many carbon hexagons make up your tube (N) and click - that's it! Want to tweak the C-C bond length? Check that box and change 1.42 to whatever you need. You can even swap carbon for B or N to make BN tubes (though I wonder if anyone will actually use that feature 😄).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae fringilla sem. Integer mattis dictum augue non auctor. Proin quis porttitor enim. Praesent vulputate arcu egestas scelerisque condimentum. Vivamus elit risus, suscipit et enim et, viverra molestie elit. Nulla ullamcorper nisl vel nisi pellentesque, id feugiat risus interdum. Duis consequat ipsum elit. Aenean hendrerit diam ipsum, a convallis magna congue et. Sed ex erat, pretium et ante id, malesuada luctus nibh. Nunc nec consectetur elit.
+## How to Use It
+
+Visit: https://suecreamm.github.io/cnt_generator/
+
+Pick either Armchair or Zigzag structure, set how many hexagons you want around the circumference (N), and click. You'll get a VASP-formatted atomic structure file.
+
+For N values between 5-8, I've already created the files - grab them [here](https://github.com/suecreamm/materials/tree/main/02CNT). For other N values, create a text file in Notepad (Windows) or terminal (Mac, Linux), paste the output, and save with .vasp extension. Drop it into [VESTA](https://jp-minerals.org/vesta/en/download.html) to see your 3D nanotube!
+
+## Development Story
+
+I use a Mac, and it's frustrating when some programs don't work on it or break when switching operating systems. That's why I learned JavaScript to make this web-based tool. Sure, there might be better programs out there, but I felt that installing Python and using terminal commands created unnecessary barriers. If you just need a structure file, why bother with all that setup?
+
+It took about a week to develop.
+
+## References & Resources
+- Atomic structures: Based on standard definitions
+- Calculations: Manually worked out for cylindrical coordinates
+- Frontend design: https://html5up.net/solid-state
+- Frontend implementation: Mostly improvised as I went along 😅

@@ -15,8 +15,6 @@ enableTocContent: true
 summary: A web-based program that generates VASP POSCAR files for CNT structures. It automates complex calculations and creates structures with simple inputs - no installation required.
 ---
 
-# Spicing Up Research with Code 1: Carbon Nanotube Structure Generator Dev Diary (1)
-
 ![program_thumb](/uploads/post/CNTnew_16_9.gif "program_thumb")
 
 Hey there! I've created a program that generates NxM CNT (Carbon Nanotube) structures in VASP format. Simply save the text file with a .VASP extension, and you can visualize your carbon nanotube using VESTA.

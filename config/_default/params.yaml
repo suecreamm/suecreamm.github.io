@@ -8,7 +8,7 @@ marketing:
   seo:
     site_type: Project
     local_business_type: 'Research'
-    org_name: 'Hwang Suehyeon'
+    org_name: 'Suecreamm'
     description: 'Shares physics-related topics from my PhD studies' 
     twitter: ''
   analytics:
@@ -31,7 +31,7 @@ header:
     align: "center"
     fixed_to_top: true
     logo:
-      text: "Suecreamm"
+      text: "Sue's Thread"
       # Logo filename in `assets/media/` folder
       filename: "" #"logo.svg"
     button:

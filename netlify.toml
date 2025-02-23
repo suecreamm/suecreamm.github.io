@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "npx tinacms build && hugo --gc --minify -b $URL && npx pagefind --source 'public'"
+  command = "hugo --gc --minify -b $URL && npx pagefind --source 'public'"
 
 [build.environment]
   HUGO_VERSION = "0.122.0"

@@ -1,20 +1,20 @@
 ---
 draft: false
-title: "연구에 코딩 끼얹기1: 탄소나노튜브 구조 생성기 개발 일기 (1) "
+title: 연구에 코딩 끼얹기1: 탄소나노튜브 구조 생성기 개발 일기 (1)
 date: 2023-12-27T22:35:25.146Z
 categories:
-- Programming
+  - Programming
 tags:
-- Programming
-- Materials
-- Physics
-- Web
+  - Programming
+  - Materials
+  - Physics
+  - Web
 series:
-- 연구에-코딩-끼얹기
+  - 연구에-코딩-끼얹기
+image: /uploads/post/CNTnew_1_1.gif
 enableToc: true
 enableTocContent: true
-image: /uploads/post/CNTnew_1_1.gif
-description: "연구에 코딩 끼얹기1: 탄소나노튜브 구조 생성기 개발 배경, 장점 등 소개"
+summary: CNT 구조의 VASP POSCAR 파일을 생성하는 웹 기반 프로그램 개발에 관한 글입니다. 복잡한 계산 과정을 자동화하고 설치 없이 간단한 입력만으로 구조를 생성할 수 있습니다.
 ---
 ## 무엇을 만들었나?
 ![program_thumb](/uploads/post/CNTnew_16_9.gif "program_thumb")

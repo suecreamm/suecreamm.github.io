@@ -10,7 +10,6 @@ tags:
   - Web
 series:
   - 연구에-코딩-끼얹기
-image: /uploads/post/CNTnew_1_1.gif
 enableToc: true
 enableTocContent: true
 summary: CNT 구조의 VASP POSCAR 파일을 생성하는 웹 기반 프로그램 개발에 관한 글입니다. 복잡한 계산 과정을 자동화하고 설치 없이 간단한 입력만으로 구조를 생성할 수 있습니다.

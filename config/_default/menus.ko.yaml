@@ -9,7 +9,7 @@ main:
     url: docs/
     weight: 30
   - name: 블로그
-    url: blog-ko/
+    url: blog/
     weight: 30
   - name: 프로젝트
     url: projects/

@@ -25,7 +25,7 @@ organizations:
     #url: https://www.stanford.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include ...
+bio: Shares physics experiences from my PhD studies. Passionate about knitting, computer programming, and bright, acidic coffee.
 #distributed robotics, mobile computing and programmable matter.
 
 # Social Networking
@@ -34,8 +34,6 @@ profiles:
   - icon: at-symbol
     url: 'mailto:hwang.sue.hyeon@gmail.com'
     label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/GetResearchDev
   - icon: brands/instagram
     url: https://www.instagram.com/
   - icon: brands/linkedin

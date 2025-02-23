@@ -1,6 +1,6 @@
 ---
 draft: false
-title: 연구에 코딩 끼얹기1: 탄소나노튜브 구조 생성기 개발 일기 (1)
+title: "연구에 코딩 끼얹기1: 탄소나노튜브 구조 생성기 개발 일기 (1)"
 date: 2023-12-27T22:35:25.146Z
 categories:
   - Programming

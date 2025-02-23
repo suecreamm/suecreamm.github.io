@@ -9,7 +9,7 @@ main:
     url: docs/
     weight: 30
   - name: 블로그
-    url: blog/
+    url: blog-ko/
     weight: 30
   - name: 프로젝트
     url: projects/
@@ -24,7 +24,9 @@ sidebar:
     params:
       type: separator
     weight: 1
+"""
   - identifier: hugoDocs
     name: "Hugo Docs ↗"
     url: ""
     weight: 3
+"""

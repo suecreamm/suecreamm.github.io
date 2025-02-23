@@ -24,9 +24,3 @@ sidebar:
     params:
       type: separator
     weight: 1
-"""
-  - identifier: hugoDocs
-    name: "Hugo Docs ↗"
-    url: ""
-    weight: 3
-"""

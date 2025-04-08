@@ -1,7 +1,7 @@
 ---
-title: Quantum ESPRESSO 실습 튜토리얼
+title: Quantum ESPRESSO 실습 튜토리얼 (그래핀)
 date: 2025-04-08
-weight: 2
+weight: 30
 sidebar:
   open: true
 ---
@@ -13,8 +13,8 @@ sidebar:
 
 ## 계산 환경 구축하기
 {{< cards >}}
-{{< card url="linux-basics" title="리눅스 기초 명령어" icon="terminal" >}}
-{{< card url="qe-installation" title="QE 빌드 및 작업 제출" icon="cog" >}}
+{{< card url="linux-basics" title="리눅스 기초 명령어" icon="command-line" >}}
+{{< card url="qe-installation" title="QE 빌드 및 작업 제출" icon="inbox-arrow-down" >}}
 {{< /cards >}}
 
 
@@ -22,5 +22,5 @@ sidebar:
 {{< cards >}}
 {{< card url="graphene-scf" title="그래핀 SCF 계산" icon="calculator" >}}
 {{< card url="graphene-bands" title="그래핀 밴드 구조 계산" icon="chart-bar" >}}
-{{< card url="graphene-dos" title="그래핀 상태 밀도 계산" icon="chart-square-bar" >}}
+{{< card url="graphene-dos" title="그래핀 상태 밀도 계산" icon="table-cells" >}}
 {{< /cards >}}

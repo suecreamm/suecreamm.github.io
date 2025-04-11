@@ -39,7 +39,7 @@ bashsbatch job_script.sh
 
 리눅스에서 "홈 디렉토리(home directory)"란 사용자의 개인 작업 공간으로, 보통 `/home/사용자이름` 형태로 되어 있습니다. 저의 사용자 이름이 `hwang`이기 때문에 여기서는 `/home/hwang/`이 이 튜토리얼 내내 홈 디렉토리라고 나올 것입니다.
 
-#### pwd
+#### 1.1 pwd
 
 클러스터에 접속하게 되면 이 디렉토리로 접속됩니다. 지금 단계에서는 이 디렉토리에 아무것도 없다고 가정하겠습니다.
 
@@ -50,7 +50,7 @@ bashsbatch job_script.sh
 /home/hwang
 ```
 
-#### wget https://gitlab.com/QEF/q-e/-/archive/qe-7.4.1/q-e-qe-7.4.1.tar.gz
+#### 1.2 wget https://gitlab.com/QEF/q-e/-/archive/qe-7.4.1/q-e-qe-7.4.1.tar.gz
 
 현재 위치가 `/home/hwang`이 맞다면 아래 명령어를 사용해 QE를 다운로드하겠습니다.  wget이나 git 둘 중 하나의 명령어를 쓰면 됩니다. git은 종종 사용이 안 되는 경우가 있는데 wget을 써도 받을 수 있습니다. 이후 `ls` 명령어를 통해 현재 디렉토리에 다운로드가 완료되었는지 확인할 수 있습니다.  
 ```

@@ -8,10 +8,13 @@ sidebar:
 
 
 ## QE 빌드 및 작업 제출
-Quantum ESPRESSO(QE)를 사용하려면 소스 코드를 다운로드하고, 이를 컴파일하여 실행 가능한 프로그램으로 만드는 빌드 과정이 필요합니다. 이후, 계산 작업을 클러스터의 작업 스케줄러에 제출해 실행합니다. 이 과정에서 병렬 컴퓨팅 도구인 `mpirun`을 활용해 효율적으로 자원을 사용할 수 있습니다. 아래에서 상세하게 설명하겠습니다.
+
+아래는 Quantum ESPRESSO(QE)를 사용하기 위한 간단한 요약입니다.
 
 
+{
 {{% steps %}}
+
 ### 소스 코드 다운로드
 
 QE 공식 웹사이트(quantum-espresso.org)에서 최신 버전의 소스 코드를 다운로드합니다. 또는 `wget`, `git` 명령어를 사용하여 다운로드할 수 있습니다.
@@ -30,7 +33,7 @@ make all
 bashsbatch job_script.sh
 작업 스크립트에는 `mpirun -np 16 pw.x -in input.in > output.out`와 같이 MPI를 사용한 병렬 실행 명령이 포함됩니다.
 {{% /steps %}}
-
+}
 
 ### 1. QE 소스 코드 다운로드 및 준비
 

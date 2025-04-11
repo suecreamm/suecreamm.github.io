@@ -6,13 +6,10 @@ sidebar:
   open: true
 ---
 
-
-## QE 빌드 및 작업 제출
-
-아래는 Quantum ESPRESSO(QE)를 사용하기 위한 간단한 요약입니다.
+아래는 Quantum ESPRESSO(QE)를 사용하기 위한 과정을 간단하게 요약한 것입니다.
 
 
-{
+
 {{% steps %}}
 
 ### 소스 코드 다운로드
@@ -33,7 +30,7 @@ make all
 bashsbatch job_script.sh
 작업 스크립트에는 `mpirun -np 16 pw.x -in input.in > output.out`와 같이 MPI를 사용한 병렬 실행 명령이 포함됩니다.
 {{% /steps %}}
-}
+
 
 ### 1. QE 소스 코드 다운로드 및 준비
 

@@ -53,12 +53,12 @@ bashsbatch job_script.sh
 #### 1.2 wget https://gitlab.com/QEF/q-e/-/archive/qe-7.4.1/q-e-qe-7.4.1.tar.gz
 
 현재 위치가 `/home/hwang`이 맞다면 아래 명령어를 사용해 QE를 다운로드하겠습니다.  wget이나 git 둘 중 하나의 명령어를 쓰면 됩니다. git은 종종 사용이 안 되는 경우가 있는데 wget을 써도 받을 수 있습니다. 이후 `ls` 명령어를 통해 현재 디렉토리에 다운로드가 완료되었는지 확인할 수 있습니다.  
-```
+```bash
 wget https://gitlab.com/QEF/q-e/-/archive/qe-7.4.1/q-e-qe-7.4.1.tar.gz
 ls
 ```
 혹은
-```
+```bash
 git clone https://github.com/QEF/q-e.git
 ls
 ```

@@ -15,7 +15,7 @@ sidebar:
 {{< cards >}}
 {{< card url="env/get-started" title="처음 시작하는 사람들이 가질만한 의문" icon="question-mark-circle" >}}
 {{< card url="env/linux-basics" title="리눅스 기초 명령어" icon="command-line" >}}
-{{< card url="env/qe-installation" title="QE 빌드 및 작업 제출" icon="inbox-arrow-down" >}}
+{{< card url="env/qe-install" title="QE 빌드 및 작업 제출" icon="inbox-arrow-down" >}}
 {{< /cards >}}
 
 

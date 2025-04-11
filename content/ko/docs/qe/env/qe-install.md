@@ -56,19 +56,14 @@ make all
 wget https://gitlab.com/QEF/q-e/-/archive/qe-7.4.1/q-e-qe-7.4.1.tar.gz
 ls
 ```
-- 예상 결과:
-```
-q-e-qe-7.4.1.tar.gz
-```
+- 예상 결과: q-e-qe-7.4.1.tar.gz
 혹은
+
 ```bash
 git clone https://github.com/QEF/q-e.git
 ls
 ```
-- 예상 결과:
-```
-q-e
-```
+- 예상 결과: q-e
 
 - wget: 인터넷에서 파일을 다운로드하는 명령어입니다.
 - git clone: GitHub 저장소를 복제합니다.

@@ -29,6 +29,7 @@ make all
 작업을 실행하려면 먼저 입력 파일(.in)을 준비한 후, 클러스터의 작업 스케줄러(SLURM, PBS 등)에 작업을 제출합니다. SLURM을 사용하는 경우 sbatch job_script.sh 명령어를 써 job submit을 하고, sh 파일에는 `mpirun -np 16 pw.x -in input.in > output.out`와 같이 MPI를 사용한 병렬 실행 명령이 포함됩니다.
 {{% /steps %}}
 
+---
 
 ### 1. QE 소스 코드 다운로드 및 준비
 

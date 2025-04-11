@@ -2,6 +2,7 @@
 title: Quantum ESPRESSO 빌드 및 작업 제출하기
 date: 2025-04-11
 weight: 40
+commentable: true
 sidebar:
   open: true
 ---

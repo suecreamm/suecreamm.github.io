@@ -13,22 +13,22 @@ sidebar:
 
 ### 계산 환경 구축하기
 {{< cards >}}
-{{< card url="get-started" title="처음 시작하는 사람들이 가질만한 의문" icon="question-mark-circle" >}}
-{{< card url="linux-basics" title="리눅스 기초 명령어" icon="command-line" >}}
-{{< card url="qe-installation" title="QE 빌드 및 작업 제출" icon="inbox-arrow-down" >}}
+{{< card url="env/get-started" title="처음 시작하는 사람들이 가질만한 의문" icon="question-mark-circle" >}}
+{{< card url="env/linux-basics" title="리눅스 기초 명령어" icon="command-line" >}}
+{{< card url="env/qe-installation" title="QE 빌드 및 작업 제출" icon="inbox-arrow-down" >}}
 {{< /cards >}}
 
 
 ### 실습 예제
 {{< cards >}}
-{{< card url="graphene-scf" title="그래핀 SCF 계산" icon="calculator" >}}
-{{< card url="graphene-bands" title="그래핀 밴드 구조 계산" icon="chart-bar" >}}
-{{< card url="graphene-dos" title="그래핀 상태 밀도 계산" icon="table-cells" >}}
+{{< card url="example/graphene-scf" title="그래핀 SCF 계산" icon="calculator" >}}
+{{< card url="example/graphene-bands" title="그래핀 밴드 구조 계산" icon="chart-bar" >}}
+{{< card url="example/graphene-dos" title="그래핀 상태 밀도 계산" icon="table-cells" >}}
 {{< /cards >}}
 
 
 ### 부록
 {{< cards >}}
-{{< card url="structure-visualization" title="원자 구조 시각화하기" icon="eye" >}}
-{{< card url="structure-formats" title="원자 구조 내 마음대로 커스텀하기" icon="lock-open" >}}
+{{< card url="appendix/structure-visualization" title="원자 구조 시각화하기" icon="eye" >}}
+{{< card url="appendix/structure-formats" title="원자 구조 내 마음대로 커스텀하기" icon="lock-open" >}}
 {{< /cards >}}

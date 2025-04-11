@@ -11,11 +11,10 @@ sidebar:
 Quantum ESPRESSO(QE)를 사용하려면 소스 코드를 다운로드하고, 이를 컴파일하여 실행 가능한 프로그램으로 만드는 빌드 과정이 필요합니다. 이후, 계산 작업을 클러스터의 작업 스케줄러에 제출해 실행합니다. 이 과정에서 병렬 컴퓨팅 도구인 `mpirun`을 활용해 효율적으로 자원을 사용할 수 있습니다. 아래에서 상세하게 설명하겠습니다.
 
 
-{{ % steps % }}
+{{% steps %}}
 ### 소스 코드 다운로드
 
-QE 공식 웹사이트(quantum-espresso.org)에서 최신 버전의 소스 코드를 다운로드합니다. 또는 wgket, git 명령어를 사용하여 다운로드할 수 있습니다.
-여기서는 `git clone https://github.com/QEF/q-e.git` 명령을 씁니다.
+QE 공식 웹사이트(quantum-espresso.org)에서 최신 버전의 소스 코드를 다운로드합니다. 또는 `wget`, `git` 명령어를 사용하여 다운로드할 수 있습니다.
 
 ### 빌드
 
@@ -30,7 +29,7 @@ make all
 작업을 실행하려면 먼저 입력 파일(.in)을 준비한 후, 클러스터의 작업 스케줄러(SLURM, PBS 등)에 작업을 제출합니다. 예를 들어, SLURM을 사용하는 경우:
 bashsbatch job_script.sh
 작업 스크립트에는 `mpirun -np 16 pw.x -in input.in > output.out`와 같이 MPI를 사용한 병렬 실행 명령이 포함됩니다.
-{{ % /steps % }}
+{{% /steps %}}
 
 
 ### 1. QE 소스 코드 다운로드 및 준비
@@ -46,6 +45,22 @@ bashsbatch job_script.sh
 /home/hwang
 ```
 
+현재 위치가 `/home/hwang`이 맞다면 아래 명령어를 사용해 QE를 다운로드하겠습니다.  wget이나 git 둘 중 하나의 명령어를 쓰면 됩니다. git은 종종 사용이 안 되는 경우가 있는데 wget을 써도 받을 수 있습니다. 이후 `ls` 명령어를 통해 현재 디렉토리에 다운로드가 완료되었는지 확인할 수 있습니다.  
+```
+wget https://gitlab.com/QEF/q-e/-/archive/qe-7.4.1/q-e-qe-7.4.1.tar.gz
+ls
+```
+```
+git clone https://github.com/QEF/q-e.git
+ls
+```
+- wget: 인터넷에서 파일을 다운로드하는 명령어입니다.
+- ls (list): 현재 디렉토리에 어떤 파일이나 폴더가 있는지 보여줍니다. (윈도우의 dir과 비슷함)
+- 예상 결과:
+```
+q-e-qe-7.4.1.tar.gz
+```
+
 
 터미널을 열고 다음 명령어를 사용해 `/home/hwang/`에서 작업을 시작합니다. 
 
@@ -56,4 +71,3 @@ cd /home/hwang/
 - `cd` (change directory): 디렉토리를 이동하는 명령어입니다. 원하는 폴더로 들어갈 때 사용합니다.
 - 예상 결과: 출력되는 메시지는 아무 것도 없지만, 현재 /home/hwang/으로 이동한 상태입니다.
 
-k

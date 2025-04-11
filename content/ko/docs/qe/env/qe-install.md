@@ -29,15 +29,16 @@ make all
 
 작업을 실행하려면 먼저 입력 파일(.in)을 준비한 후, 클러스터의 작업 스케줄러(SLURM, PBS 등)에 작업을 제출합니다. 예를 들어, SLURM을 사용하는 경우:
 bashsbatch job_script.sh
-작업 스크립트에는 mpirun -np 16 pw.x -in input.in > output.out와 같이 MPI를 사용한 병렬 실행 명령이 포함됩니다.
+작업 스크립트에는 `mpirun -np 16 pw.x -in input.in > output.out`와 같이 MPI를 사용한 병렬 실행 명령이 포함됩니다.
 {{% /steps %}}
 
 
 ### 1. QE 소스 코드 다운로드 및 준비
 
 먼저, QE 공식 웹사이트([www.quantum-espresso.org](https://www.quantum-espresso.org))나 GitHub 저장소에서 최신, 혹은 원하는 버전의 소스 코드를 다운로드합니다.
-여기서는 `/home/hwang/` 디렉토리에서 작업을 진행한다고 가정합니다. 리눅스에서 "홈 디렉토리(home directory)"란 사용자의 개인 작업 공간으로, 보통 `/home/사용자이름` 형태로 되어 있습니다. 예를 들어, 사용자 이름이 `hwang`이라면 `/home/hwang/`이 당신의 홈 디렉토리입니다.
-지금은 이 디렉토리에 아무것도 없다고 가정하겠습니다.
+여기서는 `/home/hwang/` 디렉토리에서 작업을 진행한다고 가정합니다. 리눅스에서 "홈 디렉토리(home directory)"란 사용자의 개인 작업 공간으로, 보통 `/home/사용자이름` 형태로 되어 있습니다. 저의 사용자 이름이 `hwang`이기 때문에 여기서는 `/home/hwang/`이 이 튜토리얼 내내 홈 디렉토리롸 나올 것입니다.
+
+지금 단계에서는 이 디렉토리에 아무것도 없다고 가정하겠습니다.
 
 터미널을 열고 다음 명령어를 사용해 `/home/hwang/`에서 작업을 시작합니다. 리눅스 초보자를 위해 명령어를 간단히 설명하겠습니다:
 
@@ -45,7 +46,7 @@ bashsbatch job_script.sh
 cd /home/hwang/
 ```
 
-- cd (change directory): 디렉토리를 이동하는 명령어입니다. 원하는 폴더로 들어갈 때 사용합니다.
-- 예상 결과: 아무 메시지도 출력되지 않지만, 이제 /home/hwang/으로 이동한 상태입니다.
+- `cd` (change directory): 디렉토리를 이동하는 명령어입니다. 원하는 폴더로 들어갈 때 사용합니다.
+- 예상 결과: 출력되는 메시지는 아무 것도 없지만, 현재 /home/hwang/으로 이동한 상태입니다.
 
   

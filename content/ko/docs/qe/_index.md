@@ -26,7 +26,7 @@ sidebar:
 {{< card url="example/graphene-dos" title="그래핀 상태 밀도 계산" icon="table-cells" >}}
 {{< card url="example/graphene-phonopy" title="그래핀 포논 계산 (Phonopy)" icon="{<i class='fas fa-chalkboard'></i>}"  >}}
 {{< /cards >}}
-
+{{< icon bi-instagram >}}
 
 ### 부록
 {{< cards >}}

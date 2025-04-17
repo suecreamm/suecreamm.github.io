@@ -84,6 +84,8 @@ extensions:
     enable: true
   fontawesome:
     enable: true
+  fas:
+    enable: true
   
 
 

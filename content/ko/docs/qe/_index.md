@@ -32,6 +32,6 @@ sidebar:
 
 ### 부록
 {{< cards >}}
-{{< card url="appendix/structure-visualization" title="원자 구조 시각화하기" icon="custom/solid-eye" >}}
+{{< card url="appendix/structure-visualization" title="원자 구조 시각화하기" icon="custom/solid-atom" >}}
 {{< card url="appendix/structure-formats" title="원자 구조 내 마음대로 커스텀하기" icon="custom/solid-lock-open" >}}
 {{< /cards >}}

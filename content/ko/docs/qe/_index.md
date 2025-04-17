@@ -24,7 +24,7 @@ sidebar:
 {{< card url="example/graphene-scf" title="그래핀 SCF 계산" icon="calculator" >}}
 {{< card url="example/graphene-bands" title="그래핀 밴드 구조 계산" icon="chart-bar" >}}
 {{< card url="example/graphene-dos" title="그래핀 상태 밀도 계산" icon="table-cells" >}}
-{{< card url="example/graphene-phonopy" title="그래핀 포논 계산 (Phonopy)" icon="fas/fa-stream">}}
+{{< card url="example/graphene-phonopy" title="그래핀 포논 계산 (Phonopy)" icon="fas/stream">}}
 {{< /cards >}}
 {{< icon bi-instagram >}}
 

@@ -78,6 +78,14 @@ features:
       category: 'Announcements'
       category_id: 'DIC_kwDOLeN49c4Cd60Y'
 
+# Extensions
+extensions:
+  academicons:
+    enable: true
+  fontawesome:
+    enable: true
+  
+
 
 # CMS
 #extensions:

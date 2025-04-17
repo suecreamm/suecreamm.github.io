@@ -6,6 +6,9 @@ sidebar:
   open: true
 ---
 
+<link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 ## 퀀텀 에스프레소로 DFT 시작하기
 
 이 튜토리얼에서는 CentOS 환경의 클러스터에서 Quantum ESPRESSO로 그래핀 Density Functional Theory (DFT) 계산을 하기 위한 내용을 다룹니다.

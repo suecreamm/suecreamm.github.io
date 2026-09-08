@@ -21,12 +21,13 @@ role: Physics & Materials
 
 # Organizations/Affiliations to show in About widget
 #organizations:
-  - name: Pusan National University
+  #- name: Pusan National University
     #url: https://www.stanford.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Notes on computational physics, materials science, scientific computing, and the occasional rabbit hole I fall into.
-Powered by knitting and bright, acidic coffee.
+bio: >
+  Notes on computational physics, materials science, scientific computing, and the occasional rabbit hole I fall into.
+  Powered by knitting and bright, acidic coffee.
 
 # Social Networking
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -52,7 +53,3 @@ highlight_name: true
 # Author's website URL
 website: ""
 ---
-
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include
-distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops
-self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.

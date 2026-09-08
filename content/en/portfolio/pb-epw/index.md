@@ -4,6 +4,9 @@ summary: First-principles electron–phonon calculations using Quantum ESPRESSO 
 date: 2026-09-08
 ---
 
+[View Source Code on GitHub ↗](https://github.com/suecreamm/materials/tree/main/04Pb/calc)
+
+
 <div id="github-readme">
 Loading project documentation...
 </div>

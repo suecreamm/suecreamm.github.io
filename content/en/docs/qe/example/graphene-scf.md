@@ -6,9 +6,9 @@ sidebar:
   open: true
 ---
 
-In this example, we perform a self-consistent field (SCF) calculation for graphene using Quantum ESPRESSO.
+In this example, we perform a self-consistent field (SCF) calculation for graphene using QE.
 
-The SCF calculation determines the ground-state electron density and provides the starting point for later calculations such as band structures and density of states.
+The SCF calculation determines the ground-state electron density and **provides the starting point for later calculations** such as band structures and density of states.
 
 {{% steps %}}
 
@@ -36,15 +36,13 @@ Inspect the output file and confirm that the SCF cycle has converged successfull
 
 Graphene is a two-dimensional material consisting of carbon atoms arranged in a honeycomb lattice.
 
-Because Quantum ESPRESSO uses periodic boundary conditions in all three directions, vacuum is added along the \(z\)-direction to separate periodically repeated graphene layers.
+Because QE uses periodic boundary conditions in all three directions, vacuum is added along the \(z\)-direction to separate periodically repeated graphene layers.
 
 In this example, the graphene unit cell contains two carbon atoms and a cell length of 20 Å along the \(z\)-direction.
 
 {{% callout note %}}
 
 For two-dimensional materials, the vacuum region should be large enough to reduce artificial interactions between periodically repeated layers.
-
-The appropriate vacuum size depends on the system and the property being calculated, so it should be checked when quantitative accuracy is important.
 
 {{% /callout %}}
 
@@ -268,7 +266,7 @@ For graphene and other two-dimensional materials, the important sampling is prim
 
 ### Local execution
 
-For a simple local run, Quantum ESPRESSO can be executed directly from the terminal.
+For a simple local run, QE can be executed directly from the terminal.
 
 **Serial execution**
 
@@ -288,7 +286,7 @@ Here, `-np 16` launches 16 MPI processes.
 
 On an HPC cluster, calculations are usually submitted to a **job scheduler** rather than run directly in the login shell.
 
-For example, on a SLURM-based cluster, I submit my Quantum ESPRESSO calculation with:
+For example, on a SLURM-based cluster, I submit my QE calculation with:
 
 ```bash
 sbatch qe_job_submit.sh
@@ -306,7 +304,7 @@ Some systems use `mpirun`, while others may use `srun` or another MPI launcher. 
 
 {{% /callout %}}
 
-For a more detailed walkthrough of building Quantum ESPRESSO and submitting jobs on a cluster:
+For a more detailed walkthrough of building QE and submitting jobs on a cluster:
 
 {{< cards >}}
 

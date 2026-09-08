@@ -1,17 +1,13 @@
 ---
-title: Projects
+title: Portfolio
 description: "When a materials scientist decides to code, this is what happens."
 type: landing
 
 sections:
   - block: hero
     content:
-      title: Projects
+      title: Portfolio
       text: 'Tools and applications I created to make research workflows easier.'
-      primary_action:
-        icon: brands/x
-        text: Submit Your Site
-        url: ""
 
     design:
       no_padding: true
@@ -23,7 +19,7 @@ sections:
     content:
       filters:
         folders:
-          - projects
+          - portfolio
     design:
       view: card
       spacing:

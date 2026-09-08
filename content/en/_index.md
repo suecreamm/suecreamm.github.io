@@ -1,29 +1,64 @@
 ---
+
 title: 'Home'
-date: 2024-03-20
+date: 2023-10-24
 type: landing
 
 design:
-  # Default section spacing
-  spacing: "1rem"
+spacing: "4rem"
 
 sections:
-  - block: features
-    id: features
-    content:
-      title: Features
-      text: This is where I create...
-      items:
-        - name: Docs
-          icon: document-text
-          description: A to Z research records
-        - name: Projects
-          icon: star
-          description: Useful tools
-        - name: Blog
-          icon: bolt
-          description: Articles
-        - name: About
-          icon: rectangle-group
-          description: About this site
+
+* block: hero
+  content:
+  title: Research, Code, and Technical Notes
+  text: >
+  A personal collection of scientific computing projects,
+  technical documentation, and notes from my work and study.
+  primary_action:
+  text: View Portfolio
+  url: /portfolio/
+  icon: star
+  secondary_action:
+  text: Browse Documentation
+  url: /docs/
+
+  design:
+  spacing:
+  padding: ["4rem", 0, "3rem", 0]
+  margin: [0, 0, 0, 0]
+  css_class: ""
+  background:
+  color: ""
+  image:
+  filename: ""
+
+* block: features
+  id: explore
+  content:
+  title: Explore
+  text: Browse my projects, technical documentation, notes, and background.
+  items:
+  - name: Portfolio
+  icon: star
+  description: Selected scientific computing, software, and technical projects
+
+  ```
+  - name: Documentation
+    icon: document-text
+    description: Practical workflows, technical guides, and references
+
+  - name: Blog
+    icon: bolt
+    description: Physics, computing, and notes from things I learn
+
+  - name: About
+    icon: rectangle-group
+    description: Research interests, background, skills, and contact information
+  ```
+
+  design:
+  spacing:
+  padding: ["2rem", 0, "4rem", 0]
+
 ---

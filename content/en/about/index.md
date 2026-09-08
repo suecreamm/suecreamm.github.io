@@ -5,16 +5,27 @@ reading_time: false
 pager: false
 ---
 
-## Docs
+## About Me
 
-- View the [Hugo Blox Documentation](https://docs.hugoblox.com/)
+I am a computational materials researcher interested in connecting microscopic physics with experimentally observable properties.
 
-## Live Chat {#chat}
+My work has focused on first-principles calculations of electronic structure, phonons, electron–phonon coupling, and correlated materials. I have experience with computational methods and tools including DFT+U, DFPT, EPW, Quantum ESPRESSO, VASP, Wannier90, Yambo, and Python-based analysis.
 
-- Join the [Hugo Blox Online Chat](https://discord.gg/z8wNYzb)
-  - _#using-hugo-blox_ for user help
-  - _#contributors_ for contributing help
+More broadly, I am interested in computational approaches that bridge physical modeling and measurement. This includes inverse problems, physics-informed machine learning, and data-driven methods for extracting physical information from experimental observations.
 
-## Support
+I also enjoy developing small tools, scripts, and workflows that make computational research more efficient and easier to communicate.
 
-Get support fast. Hugo Blox has the largest Hugo community on Discord, consisting of thousands of creators, developers, and startups.
+## Research Interests
+
+- Electronic structure and correlated materials
+- Phonons and lattice dynamics
+- Electron–phonon coupling
+- Computational modeling of experimental observables
+- Inverse problems and physics-informed machine learning
+- Scientific computing and research automation
+
+## Computational Tools
+
+**Electronic structure & lattice dynamics:** Quantum ESPRESSO, VASP, EPW, Wannier90, Yambo
+
+**Analysis & workflow:** Python, Git, Linux/HPC

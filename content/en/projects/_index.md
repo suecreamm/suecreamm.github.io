@@ -1,25 +1,24 @@
 ---
 title: Projects
-description: "When a materials scientist decides to code - here's what happens."
+description: "When a materials scientist decides to code, this is what happens."
 type: landing
-
-
 
 sections:
   - block: hero
     content:
       title: Projects
-      text: 'Tools and applications I created while trying to make research life easier.'
+      text: 'Tools and applications I created to make research workflows easier.'
       primary_action:
         icon: brands/x
         text: Submit Your Site
         url: ""
-      
+
     design:
       no_padding: true
       spacing:
         padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
+
   - block: collection
     content:
       filters:

@@ -1,62 +1,83 @@
 ---
-title: "Spicing Up Research with Code 1: Carbon Nanotube Structure Generator Dev Diary (1)"
+title: "Spicing Up Research with Code #1: Building a CNT Structure Generator"
 date: 2023-12-27
+
 categories:
- - Programming
+  - Programming
+
 tags:
- - Programming
- - Materials
- - Physics
- - Web
+  - Programming
+  - Materials
+  - Physics
+  - Web
+
 series:
- - Spicing-Up-Research-with-Code
+  - Spicing-Up-Research-with-Code
+
 enableToc: true
 enableTocContent: true
-summary: A web-based program that generates VASP POSCAR files for CNT structures. It automates complex calculations and creates structures with simple inputs - no installation required.
+
+summary: A web-based tool for generating carbon nanotube structures in VASP POSCAR format. It automates geometric calculations and creates structures from a small number of user inputs without requiring local installation.
 ---
 
-![program_thumb](/uploads/post/CNTnew_16_9.gif "program_thumb")
+![program_thumb](CNTnew_16_9.gif "program_thumb")
 
-Hey there! I've created a program that generates NxM CNT (Carbon Nanotube) structures in VASP format. Simply save the text file with a .VASP extension, and you can visualize your carbon nanotube using VESTA.
+I created a web-based tool for generating CNT (carbon nanotube) structures in VASP POSCAR format. The generated coordinates can be saved as a `.vasp` file and visualized directly in VESTA.
 
 ![honey](/uploads/post/honey.png "honey")
 
-Think of a CNT as a sheet of graphene (carbon atoms arranged in hexagons) rolled into a cylinder - kind of like that cylindrical honeycomb structure above. I made sure to include vacuum space around the tube for VASP calculations.
+A CNT can be understood as a graphene sheet rolled into a cylinder, producing the familiar cylindrical honeycomb structure shown above. The generated structures also include vacuum around the tube so that they can be used directly in periodic VASP calculations.
 
 ## Why I Built It
 
-I tried several existing tools but ran into these frustrations:
-- Manual calculations were a real headache → So I automated them
-- Why install software when you just need a structure file? → Made it web-based
-- The manuals were so complicated - like reading research papers! → Simplified the inputs
-- Too many terminal commands and setup steps → Created a simple web interface
+I tried several existing structure-generation tools but found a few recurring issues:
 
-## Cool Features
+- Some required manual geometric calculations.
+- Others required local installation or command-line setup.
+- Input options were often more complicated than necessary for simple CNT generation.
+- I wanted a lightweight tool that could generate a structure directly in the browser.
 
-### No Installation, Works Everywhere
-Since it's a web-based JS program, you don't need to install anything. Works on any operating system!
+This led me to build a simple web-based generator that automates the geometry and minimizes the number of required inputs.
 
-### Super Easy to Use
-![CNTG_web_Capture](/uploads/post/CNTwebCapture.jpg "CNTG_web_Capture")
+## Features
 
-Just two main inputs! Choose how many carbon hexagons make up your tube (N) and click - that's it! Want to tweak the C-C bond length? Check that box and change 1.42 to whatever you need. You can even swap carbon for B or N to make BN tubes (though I wonder if anyone will actually use that feature 😄).
+### No Installation Required
+
+The generator runs entirely in the browser using JavaScript, so no local installation is required. It can be used across different operating systems.
+
+### Simple Input
+
+![CNTG_web_Capture](/uploads/post/CNTwebCapture.jpg "CNT Generator web interface")
+
+The main input is the number of carbon hexagons around the tube circumference. Users can also adjust the C-C bond length and change the atomic species if needed.
+
+Both armchair and zigzag CNT structures are supported.
 
 ## How to Use It
 
-Visit: https://suecreamm.github.io/cnt_generator/
+Try the generator here:
 
-Pick either Armchair or Zigzag structure, set how many hexagons you want around the circumference (N), and click. You'll get a VASP-formatted atomic structure file.
+[Open CNT Generator ↗](https://suecreamm.github.io/cnt_generator/)
 
-For N values between 5-8, I've already created the files - grab them [here](https://github.com/suecreamm/materials/tree/main/02CNT). For other N values, create a text file in Notepad (Windows) or terminal (Mac, Linux), paste the output, and save with .vasp extension. Drop it into [VESTA](https://jp-minerals.org/vesta/en/download.html) to see your 3D nanotube!
+Choose either an **armchair** or **zigzag** structure, set the desired value of \(N\), and generate the structure. The resulting atomic coordinates are provided in VASP POSCAR format.
+
+Example structures for several values of \(N\) are also available here:
+
+[View example structures on GitHub ↗](https://github.com/suecreamm/materials/tree/main/02CNT)
+
+The generated output can be saved as a `.vasp` file and opened in [VESTA](https://jp-minerals.org/vesta/en/download.html) for 3D visualization.
 
 ## Development Story
 
-I use a Mac, and it's frustrating when some programs don't work on it or break when switching operating systems. That's why I learned JavaScript to make this web-based tool. Sure, there might be better programs out there, but I felt that installing Python and using terminal commands created unnecessary barriers. If you just need a structure file, why bother with all that setup?
+I started this project because I wanted a lightweight structure-generation tool that would work consistently across different operating systems.
 
-It took about a week to develop.
+Rather than relying on a Python environment or terminal-based workflow, I used JavaScript so that the entire process could run directly in a web browser.
+
+The geometric relations for the CNT coordinates were implemented using cylindrical coordinates, and the first working version took about a week to develop.
 
 ## References & Resources
-- Atomic structures: Based on standard definitions
-- Calculations: Manually worked out for cylindrical coordinates
-- Frontend design: https://html5up.net/solid-state
-- Frontend implementation: Mostly improvised as I went along 😅
+
+- Atomic structures: based on standard CNT geometry
+- Coordinate generation: implemented using cylindrical-coordinate relations
+- Frontend design: [HTML5 UP – Solid State](https://html5up.net/solid-state)
+- Source code: [GitHub repository ↗](https://github.com/suecreamm/cnt_generator)

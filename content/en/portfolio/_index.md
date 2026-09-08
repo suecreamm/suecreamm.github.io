@@ -14,6 +14,7 @@ sections:
       spacing:
         padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
+      css_class: "portfolio-hero"
 
   - block: collection
     content:

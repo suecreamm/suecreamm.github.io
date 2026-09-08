@@ -39,3 +39,53 @@ h3 {
 .article-style {
   font-size: 0.95rem;
 }
+
+/* -------- Home arrangement --------- */
+/* Explore section */
+#explore section > div > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center feature contents */
+#explore section > div > div:last-child > div {
+  text-align: center;
+}
+
+/* Center icons */
+#explore section > div > div:last-child > div > div:first-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile: one centered column */
+@media (max-width: 767px) {
+  #explore section > div > div:last-child {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    gap: 3rem;
+  }
+}
+
+/* ---- Too Large ---- */
+.home-hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4.8rem) !important;
+  line-height: 1.05 !important;
+}
+
+.home-hero p {
+  font-size: clamp(1.2rem, 1.8vw, 1.7rem);
+}
+
+.portfolio-hero h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem) !important;
+  line-height: 1.08 !important;
+}
+
+.portfolio-hero p {
+  font-size: clamp(1.15rem, 1.7vw, 1.6rem);
+}

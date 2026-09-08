@@ -5,14 +5,14 @@ main:
   - name: Home
     url: /
     weight: 10
+  - name: 포트폴리오
+    url: portfolio/
+    weight: 30
   - name: 문서
     url: docs/
-    weight: 30
+    weight: 40
   - name: 블로그
     url: blog/
-    weight: 40
-  - name: 프로젝트
-    url: projects/
     weight: 50
   - name: About
     url: about/
@@ -20,7 +20,11 @@ main:
 
 sidebar:
   - identifier: more
-    name: Still need help?
+    name: More
     params:
       type: separator
     weight: 1
+  - identifier: github
+    name: "GitHub ↗"
+    url: "https://github.com/suecreamm"
+    weight: 2

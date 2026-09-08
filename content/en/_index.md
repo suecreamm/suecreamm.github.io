@@ -5,6 +5,7 @@ type: landing
 
 design:
   spacing: "4rem"
+  css_class: "home-hero"
 
 sections:
   - block: hero
@@ -39,9 +40,6 @@ sections:
       title: Explore
       text: Browse my projects, technical documentation, notes, and background.
       items:
-        - name: Optimized SEO
-          icon: magnifying-glass
-          description: Automatic sitemaps, RSS feeds, and rich metadata take the pain out of SEO and syndication.
         - name: Portfolio
           icon: star
           description: Selected scientific computing, software, and technical projects

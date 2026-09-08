@@ -8,7 +8,7 @@ sidebar:
 
 In this example, we perform a self-consistent field (SCF) calculation for graphene using QE.
 
-The SCF calculation determines the ground-state electron density and **provides the starting point for later calculations** such as band structures and density of states.
+The SCF calculation determines the ground-state electron density and provides the starting point for later calculations such as band structures and density of states.
 
 {{% steps %}}
 

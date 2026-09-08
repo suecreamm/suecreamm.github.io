@@ -33,9 +33,27 @@ fetch(
   })
   .then(markdown => {
 
+    // Fix relative paths in HTML <img> tags
+    markdown = markdown.replace(
+      /<img([^>]*?)src=["']([^"']+)["']([^>]*?)>/g,
+      (match, before, src, after) => {
+
+        if (
+          !src.startsWith("http://") &&
+          !src.startsWith("https://")
+        ) {
+          src = rawBase + src;
+        }
+
+        return `<img${before}src="${src}"${after}>`;
+      }
+    );
+
     const renderer = new marked.Renderer();
 
+    // Fix Markdown image paths: ![](image.png)
     renderer.image = function({ href, title, text }) {
+
       if (
         !href.startsWith("http://") &&
         !href.startsWith("https://")
@@ -58,7 +76,9 @@ fetch(
       `;
     };
 
+    // Fix relative links to files/directories in the GitHub repo
     renderer.link = function({ href, title, tokens }) {
+
       const text = this.parser.parseInline(tokens);
 
       if (
@@ -82,11 +102,15 @@ fetch(
     };
 
     document.getElementById("github-readme").innerHTML =
-      marked.parse(markdown, { renderer });
+      marked.parse(markdown, {
+        renderer,
+        gfm: true
+      });
   })
   .catch(error => {
     document.getElementById("github-readme").innerHTML =
       "<p>Could not load the project README.</p>";
+
     console.error(error);
   });
 </script>

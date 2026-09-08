@@ -4,8 +4,7 @@ date: 2023-10-24
 type: landing
 
 design:
-  spacing: "4rem"
-  css_class: "home-hero"
+  spacing: "2.5rem"
 
 sections:
   - block: hero
@@ -24,8 +23,8 @@ sections:
       spacing:
         padding: [0, 0, 0, 0]
         margin: [0, 0, 0, 0]
+        css_class: "home-hero"
       # For full-screen, add `min-h-screen` below
-      css_class: ""
       background:
         color: ""
         image:

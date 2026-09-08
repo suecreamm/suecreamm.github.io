@@ -17,16 +17,16 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: PhD Student
+role: Physics & Materials
 
 # Organizations/Affiliations to show in About widget
-organizations:
+#organizations:
   - name: Pusan National University
     #url: https://www.stanford.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Shares physics experiences from my PhD studies. Passionate about knitting, computer programming, and bright, acidic coffee.
-#distributed robotics, mobile computing and programmable matter.
+bio: Notes on computational physics, materials science, scientific computing, and the occasional rabbit hole I fall into.
+Powered by knitting and bright, acidic coffee.
 
 # Social Networking
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -34,10 +34,10 @@ profiles:
   - icon: at-symbol
     url: 'mailto:hwang.sue.hyeon@gmail.com'
     label: E-mail Me
-  - icon: brands/instagram
-    url: https://www.instagram.com/
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/
+  #- icon: brands/instagram
+    #url: https://www.instagram.com/
+  #- icon: brands/linkedin
+  #  url: https://www.linkedin.com/
   # Link to a PDF of your resume/CV - upload it to `static/uploads/resume.pdf`
   #- icon: academicons/cv
     #url: uploads/resume.pdf

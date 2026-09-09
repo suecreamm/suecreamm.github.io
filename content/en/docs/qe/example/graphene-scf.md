@@ -2,6 +2,7 @@
 title: 1. Graphene SCF Calculation
 date: 2026-09-01
 weight: 50
+commentable: true
 sidebar:
   open: true
 ---

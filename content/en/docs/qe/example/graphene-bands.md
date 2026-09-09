@@ -13,21 +13,21 @@ The important point is that the band calculation reuses the converged ground-sta
 
 {{% steps %}}
 
-### Create a working directory
+### Create the working directory
 
-Make a separate directory for the band-structure calculation and copy the SCF input using a relative path.
+Create a directory for the band calculation and copy the required SCF files from the parent directory.
 
-### Prepare the band input
+### Prepare the input files
 
-Reuse the SCF setup, change the calculation type to `bands`, and define a high-symmetry k-point path.
+Prepare `99band.1pw.in` for `pw.x`, including the high-symmetry k-point path, and `99band.2pp.in` for `bands.x` post-processing.
 
 ### Run `pw.x`
 
-Calculate the Kohn-Sham eigenvalues along the selected path.
+Run `99band.1pw.in` with `pw.x` to calculate the Kohn–Sham eigenvalues along the specified high-symmetry k-point path.
 
-### Post-process with `bands.x`
+### Run `bands.x`
 
-Collect the calculated eigenvalues into a convenient band-data file for plotting.
+Run `99band.2pp.in` with `bands.x` to process the calculated eigenvalues and generate a `.dat` file containing the band energies along the selected k-point path for plotting.
 
 {{% /steps %}}
 
@@ -156,7 +156,7 @@ CELL_PARAMETERS angstrom
 
 `nbnd = 8` is an example value chosen to include several conduction bands above the occupied states.
 
-The number of bands should be adjusted depending on the energy range you want to visualize.
+If the material has more electrons, more bands are needed to represent the occupied states. You should also increase `nbnd` if you want to plot more conduction bands at higher energies.
 
 {{% /callout %}}
 
@@ -206,7 +206,7 @@ pw.x -in 99band.1pw.in > 99band.1pw.out
 For an MPI calculation:
 
 ```bash
-mpirun -np 16 pw.x -in 99band.1pw.in > 99band.1pw.out
+mpirun -np 4 pw.x -in 99band.1pw.in > 99band.1pw.out
 ```
 
 ### HPC job submission

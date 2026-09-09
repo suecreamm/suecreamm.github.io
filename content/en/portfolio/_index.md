@@ -1,6 +1,6 @@
 ---
 title: Portfolio
-description: "When a materials scientist decides to code, this is what happens."
+description: "Selected work in computational materials physics and scientific programming."
 type: landing
 
 sections:

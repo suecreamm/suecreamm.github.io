@@ -1,12 +1,12 @@
 ---
-title: Graphene Band Structure Calculation
+title: 2. Graphene Band Structure Calculation
 date: 2026-09-02
 weight: 60
 sidebar:
   open: true
 ---
 
-This tutorial continues from the graphene SCF calculation and calculates the electronic band structure along the high-symmetry path \(\Gamma \rightarrow M \rightarrow K \rightarrow \Gamma\).
+This tutorial continues from the [graphene SCF calculation](../graphene-scf) and calculates the electronic band structure along the high-symmetry path \(\Gamma \rightarrow M \rightarrow K \rightarrow \Gamma\).
 
 The important point is that the band calculation reuses the converged ground-state data from the previous SCF calculation.
 
@@ -46,7 +46,7 @@ cd 99band
 Copy the previous SCF input into the new directory using a relative path:
 
 ```bash
-cp ../1scf.in ./2bands.in
+cp ../1scf.in ./99band.1pw.in
 ```
 
 Here, `..` means the parent directory and `.` means the current directory.
@@ -87,7 +87,7 @@ The original SCF input is also available on GitHub:
 Open the copied file:
 
 ```bash
-vi 2bands.in
+vi 99band.1pw.in
 ```
 
 The main changes from the SCF calculation are:
@@ -199,13 +199,13 @@ Therefore, instead of an automatic mesh, we explicitly specify a sequence of hig
 ### Local execution
 
 ```bash
-pw.x -in 2bands.in > 2bands.out
+pw.x -in 99band.1pw.in > 99band.1pw.out
 ```
 
 For an MPI calculation:
 
 ```bash
-mpirun -np 16 pw.x -in 2bands.in > 2bands.out
+mpirun -np 16 pw.x -in 99band.1pw.in > 99band.1pw.out
 ```
 
 ### HPC job submission
@@ -216,7 +216,7 @@ On a SLURM-based cluster, the calculation can be submitted through the same job-
 sbatch qe_job_submit.sh
 ```
 
-If the job script contains a fixed input filename, change it from `1scf.in` to `2bands.in` before submission.
+If the job script contains a fixed input filename, change it from `1scf.in` to `99band.1pw.in` before submission.
 
 [View my `qe_job_submit.sh` on GitHub ↗](https://github.com/suecreamm/materials/blob/main/scripts/qe/qe_job_submit.sh)
 
@@ -235,13 +235,13 @@ If QE cannot find the previous calculation, check the relative `outdir` path fir
 After the calculation finishes, inspect the end of the output file:
 
 ```bash
-tail -50 2bands.out
+tail -50 99band.1pw.out
 ```
 
 You can also check that the job finished normally:
 
 ```bash
-grep "JOB DONE" 2bands.out
+grep "JOB DONE" 99band.1pw.out
 ```
 
 At this stage, `pw.x` has calculated the eigenvalues along the selected k-point path.
@@ -252,7 +252,7 @@ The next step is to collect the band data using `bands.x`.
 
 ## 6. Post-process with `bands.x`
 
-Create an input file named `3bandsx.in`:
+Create an input file named `99band.2pp.in`:
 
 ```text
 &BANDS
@@ -265,7 +265,7 @@ filband = 'graphene.bands'
 Run:
 
 ```bash
-bands.x -in 3bandsx.in > 3bandsx.out
+bands.x -in 99band.2pp.in > 99band.2pp.out
 ```
 
 This creates:

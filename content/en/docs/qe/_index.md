@@ -32,7 +32,7 @@ This tutorial covers the basic workflow for performing Density Functional Theory
 
 {{< card url="example/graphene-scf" title="1. Graphene SCF Calculation" icon="custom/solid-calculator" >}}
 
-{{< card url="" title="2. Graphene Band Structure" icon="custom/solid-signal" >}}
+{{< card url="example/graphene-bands" title="2. Graphene Band Structure" icon="custom/solid-signal" >}}
 
 {{< card url="" title="3. Graphene Density of States" icon="custom/solid-table-cells-large" >}}
 

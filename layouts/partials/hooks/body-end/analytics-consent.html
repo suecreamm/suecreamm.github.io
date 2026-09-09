@@ -1,0 +1,32 @@
+<div
+  id="analytics-consent-banner"
+  role="dialog"
+  aria-label="Analytics consent"
+>
+  <div class="analytics-consent-text">
+    We use Google Analytics to understand how visitors use this site. If you accept, analytics cookies will be used. If you decline, no analytics cookies will be stored, although limited cookieless measurement may still occur.
+    <a href="/privacy/">Privacy</a>
+  </div>
+
+  <div class="analytics-consent-buttons">
+    <button
+      class="
+        analytics-consent-button
+        analytics-consent-reject
+      "
+      onclick="rejectAnalytics()"
+    >
+      Reject
+    </button>
+
+    <button
+      class="
+        analytics-consent-button
+        analytics-consent-accept
+      "
+      onclick="acceptAnalytics()"
+    >
+      Accept
+    </button>
+  </div>
+</div>

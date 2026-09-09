@@ -2,8 +2,6 @@
 title: Graphene Band Structure Calculation
 date: 2026-09-02
 weight: 60
-commentable: true
-draft: true
 sidebar:
   open: true
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Privacy"
 date: 2026-09-09
+weight: 9999
 ---
 
 This website uses Google Analytics to understand how visitors use the site and to improve its content.

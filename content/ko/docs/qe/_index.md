@@ -16,7 +16,7 @@ sidebar:
 
 ### 계산 환경 구축하기
 {{< cards >}}
-{{< card url="env/get-started" title="처음 시작하는 사람들이 가질만한 의문" icon="custom/solid-circle-question" >}}
+{{< card url="env/questions" title="처음 시작하는 사람들이 가질만한 의문" icon="custom/solid-circle-question" >}}
 {{< card url="env/linux-basics" title="리눅스 기초 명령어" icon="custom/solid-terminal" >}}
 {{< card url="env/qe-install" title="QE 빌드 및 작업 제출" icon="custom/solid-download" >}}
 {{< /cards >}}

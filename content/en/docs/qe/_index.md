@@ -18,7 +18,7 @@ This tutorial covers the basic workflow for performing Density Functional Theory
 
 {{< cards >}}
 
-{{< card url="" title="Common Questions for Beginners" icon="custom/solid-circle-question" >}}
+{{< card url="env/questions" title="Common Questions for Beginners" icon="custom/solid-circle-question" >}}
 
 {{< card url="" title="Basic Linux Commands" icon="custom/solid-terminal" >}}
 

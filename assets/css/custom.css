@@ -89,3 +89,33 @@ h3 {
 .portfolio-hero p {
   font-size: clamp(1.15rem, 1.7vw, 1.6rem);
 }
+
+/* =========================================================
+   Inline code
+   Example: `bands.x`
+   ========================================================= */
+
+:not(pre) > code {
+  padding: 0.12em 0.35em;
+  margin: 0 0.04em;
+
+  font-size: 0.9em;
+  font-weight: 500;
+
+  color: #2f2f2f;
+  background-color: #f4f4f3;
+
+  border: 1px solid #dededb;
+  border-radius: 6px;
+
+  white-space: nowrap;
+}
+
+/* Dark mode */
+.dark :not(pre) > code,
+[data-theme="dark"] :not(pre) > code {
+  color: #e7e7e7;
+  background-color: #2b2b2b;
+
+  border-color: #454545;
+}

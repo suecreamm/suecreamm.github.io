@@ -1,12 +1,11 @@
 ---
-
 title: Building Quantum ESPRESSO and Submitting Jobs
 date: 2025-04-11
 weight: 40
 commentable: true
 sidebar:
 open: true
-----------
+---
 
 Below is a brief overview of the basic steps required to install Quantum ESPRESSO (QE) and run calculations on a computing cluster.
 

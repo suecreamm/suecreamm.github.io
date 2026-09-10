@@ -1,3 +1,12 @@
+---
+title: 처음 시작하는 사람들이 가질만한 질문
+date: 2026-09-09
+weight: 10
+commentable: true
+sidebar:
+    open: true
+---
+
 ## 전체 경로(`/home/.../pw.x`) 없이 `pw.x`만 입력해서 실행하려면?
 
 처음에는 Quantum ESPRESSO 실행 파일의 전체 경로를 직접 써야 할 수 있습니다.

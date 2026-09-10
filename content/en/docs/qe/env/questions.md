@@ -1,3 +1,12 @@
+---
+title: Common Questions for Beginners
+date: 2026-09-09
+weight: 10
+commentable: true
+sidebar:
+    open: true
+---
+
 ## How can I run `pw.x` without typing the full path (`/home/.../pw.x`)?
 
 At first, you may need to run Quantum ESPRESSO using the full path:

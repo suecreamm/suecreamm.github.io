@@ -90,32 +90,33 @@ h3 {
   font-size: clamp(1.15rem, 1.7vw, 1.6rem);
 }
 
-/* =========================================================
-   Inline code
-   Example: `bands.x`
-   ========================================================= */
-
+/* ============== Inline code ============== */
 :not(pre) > code {
   padding: 0.12em 0.35em;
   margin: 0 0.04em;
 
-  font-size: 0.9em;
+  font-size: 0.92em;
   font-weight: 500;
 
-  color: #2f2f2f;
-  background-color: #f4f4f3;
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.055);
 
-  border: 1px solid #dededb;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 6px;
 
   white-space: nowrap;
 }
 
+/* Remove backticks */
+:not(pre) > code::before,
+:not(pre) > code::after {
+  content: none !important;
+}
+
 /* Dark mode */
 .dark :not(pre) > code,
 [data-theme="dark"] :not(pre) > code {
-  color: #e7e7e7;
-  background-color: #2b2b2b;
-
-  border-color: #454545;
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
 }

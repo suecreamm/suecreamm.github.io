@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 64 64"
+   role="img"
+   aria-labelledby="title desc"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="sues-thread-favicon.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.6875"
+     inkscape:cx="32"
+     inkscape:cy="32"
+     inkscape:window-width="1032"
+     inkscape:window-height="747"
+     inkscape:window-x="252"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3" />
+  <title
+     id="title">Sue's Thread favicon</title>
+  <desc
+     id="desc">A casual ribbon-like S in bright cyan and warm ivory on deep navy, with a small golden four-point sparkle.</desc>
+  <!-- Deep navy background for strong favicon contrast -->
+  <rect
+     width="64"
+     height="64"
+     rx="13"
+     fill="#07182F"
+     id="rect1" />
+  <!-- Cyan upper ribbon: broad at the crown, slightly narrower through the middle -->
+  <path
+     fill="#20E4E8"
+     d="     M14.1 17.2     C18.8 10.3 28.0 7.7 36.7 9.3     C43.0 10.5 48.0 14.3 50.2 19.3     C51.5 22.2 51.0 25.2 48.7 27.2     C47.0 28.7 44.6 28.7 42.9 27.2     C41.5 26.0 41.4 24.0 42.5 22.4     C40.9 19.6 37.9 17.7 34.2 17.0     C29.3 16.0 24.4 17.3 21.7 20.0     C20.0 21.7 20.0 23.3 21.3 24.6     C22.8 26.1 26.3 27.2 30.1 28.6     L41.0 32.6     C43.4 33.5 44.5 35.8 43.6 38.2     C42.7 40.7 40.0 41.8 37.6 40.8     L25.8 36.0     C20.3 33.8 15.4 31.3 13.1 27.0     C11.4 23.8 11.8 20.7 14.1 17.2 Z"
+     id="path1" />
+  <!-- Ivory lower ribbon: diagonal entry + open lower loop -->
+  <path
+     fill="#FFF0C8"
+     d="     M25.4 24.4     C27.0 22.0 29.8 21.6 32.1 23.0     L43.9 30.0     C49.0 33.0 51.3 37.2 50.7 42.3     C49.8 49.3 42.6 54.4 33.3 55.0     C25.0 55.6 16.4 52.7 13.3 47.5     C10.7 43.0 11.5 38.7 14.6 35.6     C16.3 33.9 18.9 33.9 20.6 35.5     C22.2 37.0 22.2 39.4 20.5 41.0     C18.7 42.8 18.6 44.5 20.3 46.0     C22.8 48.2 27.6 49.5 32.2 49.2     C38.2 48.9 43.4 46.0 44.2 42.0     C44.7 39.4 43.4 37.5 40.5 35.8     L27.4 28.2     C25.2 26.9 24.3 26.0 25.4 24.4 Z"
+     id="path2" />
+  <!-- Small four-point sparkle; kept chunky for 16 px visibility -->
+  <path
+     fill="#ffc83d"
+     d="m 54.872041,23.844069 c 0.542955,0 1.008339,0.93077 1.318594,2.559616 0.310255,1.396156 0.775641,1.86154 2.171798,2.171791 1.628844,0.310259 2.55961,0.775646 2.55961,1.318594 0,0.542952 -0.930766,1.008337 -2.55961,1.318596 -1.396157,0.310249 -1.861543,0.775636 -2.171798,2.171798 -0.310255,1.628837 -0.775639,2.559614 -1.318594,2.559614 -0.542945,0 -1.008331,-0.930777 -1.318588,-2.559614 -0.310256,-1.396162 -0.775635,-1.861549 -2.171796,-2.171798 -1.628842,-0.310259 -2.559614,-0.775644 -2.559614,-1.318596 0,-0.542948 0.930772,-1.008335 2.559614,-1.318594 1.396161,-0.310251 1.86154,-0.775635 2.171796,-2.171791 0.310257,-1.628846 0.775643,-2.559616 1.318588,-2.559616 z"
+     id="path3"
+     style="stroke-width:0.999995" />
+</svg>

@@ -1,13 +1,13 @@
 # Navigation Links
 #   The weight parameter defines the order that the links will appear in.
+#- name: Research
+#    url: research/
+#    weight: 20
 
 main:
   - name: Home
     url: /
     weight: 10
-  - name: Research
-    url: research/
-    weight: 20
   - name: Works
     url: works/
     weight: 30

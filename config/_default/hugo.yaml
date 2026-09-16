@@ -3,15 +3,10 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: "Suecreamm" # Website name
-baseURL: 'https://suecreamm.github.io' # Website URL
-
-############################
-## PAGE OPTIONS
-############################
+title: "Sue's Thread" # Website name
+baseURL: 'https://suecreamm.github.io' 
 
 cascade:
-  # Docs folder options
   - _target:
       path: /docs/**
     editable: true

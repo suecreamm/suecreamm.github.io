@@ -16,7 +16,7 @@ sidebar:
 
 ### 계산 환경 구축하기
 {{< cards >}}
-{{< card url="env/questions" title="처음 시작하는 사람들이 가질만한 의문" icon="custom/solid-circle-question" >}}
+{{< card url="env/questions" title="처음 시작하는 사람들이 가질만한 질문" icon="custom/solid-circle-question" >}}
 {{< card url="env/linux-basics" title="리눅스 기초 명령어" icon="custom/solid-terminal" >}}
 {{< card url="env/qe-install" title="QE 빌드 및 작업 제출" icon="custom/solid-download" >}}
 {{< /cards >}}
@@ -33,5 +33,5 @@ sidebar:
 ### 부록
 {{< cards >}}
 {{< card url="appendix/structure-visualization" title="원자 구조 시각화하기" icon="custom/solid-atom" >}}
-{{< card url="appendix/structure-formats" title="원자 구조 내 마음대로 커스텀하기" icon="custom/solid-lock-open" >}}
+{{< card url="appendix/structure-customization" title="원자 구조 내 마음대로 커스텀하기" icon="custom/solid-lock-open" >}}
 {{< /cards >}}

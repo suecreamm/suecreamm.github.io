@@ -44,8 +44,8 @@ This tutorial covers the basic workflow for performing Density Functional Theory
 
 {{< cards >}}
 
-{{< card url="" title="Visualizing Atomic Structures" icon="custom/solid-atom" >}}
+{{< card url="appendix/structure-visualization" title="Visualizing Atomic Structures" icon="custom/solid-atom" >}}
 
-{{< card url="" title="Customizing Atomic Structures" icon="custom/solid-lock-open" >}}
+{{< card url="appendix/structure-customization" title="Customizing Atomic Structures" icon="custom/solid-lock-open" >}}
 
 {{< /cards >}}

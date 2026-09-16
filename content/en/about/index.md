@@ -7,25 +7,21 @@ pager: false
 
 ## About Me
 
-I am a computational materials researcher interested in connecting microscopic physics with experimentally observable properties.
+I am a computational condensed-matter physicist interested in connecting microscopic models with measurable physical phenomena.
 
-My work has focused on first-principles calculations of electronic structure, phonons, electron–phonon coupling, and correlated materials. I have experience with computational methods and tools including DFT+U, DFPT, EPW, Quantum ESPRESSO, VASP, Wannier90, Yambo, and Python-based analysis.
+My work has focused on electronic structure, phonons, electron–phonon interactions, and correlated materials using first-principles methods. More broadly, I am interested in computational approaches to complex physical systems, including quantum simulation, inverse problems, and physics-informed machine learning.
 
-More broadly, I am interested in computational approaches that bridge physical modeling and measurement. This includes inverse problems, physics-informed machine learning, and data-driven methods for extracting physical information from experimental observations.
-
-I also enjoy developing small tools, scripts, and workflows that make computational research more efficient and easier to communicate.
+I also develop small tools and workflows for scientific computing, analysis, and research communication.
 
 ## Research Interests
 
-- Electronic structure and correlated materials
-- Phonons and lattice dynamics
-- Electron–phonon coupling
-- Computational modeling of experimental observables
-- Inverse problems and physics-informed machine learning
-- Scientific computing and research automation
+* Electronic structure and correlated systems
+* Phonons and electron–phonon interactions
+* Quantum simulation and algorithms
+* Modeling of experimental observables
+* Inverse problems and physics-informed machine learning
 
 ## Computational Tools
 
-**Electronic structure & lattice dynamics:** Quantum ESPRESSO, VASP, EPW, Wannier90, Yambo
-
-**Analysis & workflow:** Python, Git, Linux/HPC
+**Materials:** Quantum ESPRESSO, VASP, EPW, Wannier90, Yambo
+**Computing:** Python, Qiskit, Git, Linux/HPC, Web development

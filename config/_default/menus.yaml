@@ -5,18 +5,21 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Portfolio
-    url: portfolio/
+  - name: Research
+    url: research/
     weight: 20
+  - name: Works
+    url: works/
+    weight: 30
   - name: Documentation
     url: docs/
-    weight: 30    
+    weight: 40    
   - name: Blog
     url: blog/
-    weight: 40
+    weight: 50
   - name: About
     url: about/
-    weight: 50
+    weight: 60
 
 sidebar:
   - identifier: more

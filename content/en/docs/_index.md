@@ -1,28 +1,24 @@
 ---
-
-linkTitle: Documentation
 title: Documentation
 ---
 
-Technical notes, practical guides, and workflows from my work in scientific computing, computational physics, and related topics.
+---
+
+Technical notes and practical workflows from my work in scientific computing and computational physics.
 
 <!--more-->
 
-This documentation is a collection of methods, setup notes, workflows, and practical references related to scientific computing and computational physics.
-
-The goal is to keep useful technical details in one place — especially the steps, assumptions, and troubleshooting notes that are easy to forget when reproducing a calculation.
-
+A collection of setup notes, workflows, and references for reproducing calculations and managing computational tasks.
 
 ## Topics
 
 {{< cards >}}
 
-{{< card url="qe" title="Quantum ESPRESSO" icon="document-text" subtitle="DFT workflows, HPC setup, band structures, DOS, and phonon calculations" >}}
+{{< card url="qe" title="Quantum ESPRESSO Tutorials (Example: Graphene)" icon="document-text" subtitle="Hands-on DFT workflows from Linux/HPC setup to graphene SCF, band structures, DOS, phonons, and atomic-structure visualization and customization" >}}
 
 {{< /cards >}}
 
 ## How to Use These Notes
 
-Most pages are written as practical references rather than formal textbooks. They focus on the steps, assumptions, and details that are easy to forget when reproducing a calculation or setting up a workflow.
+These pages are practical references rather than formal textbooks and are based on my actual work. Some are introductory, while others assume familiarity with DFT, Linux, or scientific computing.
 
-Some sections are introductory, while others assume prior familiarity with DFT, Linux, or scientific computing.

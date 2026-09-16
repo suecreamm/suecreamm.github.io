@@ -5,18 +5,16 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: 포트폴리오
-    url: portfolio/
-    weight: 30
+
   - name: 문서
     url: docs/
-    weight: 40
+    weight: 60
   - name: 블로그
     url: blog/
-    weight: 50
+    weight: 60
   - name: About
     url: about/
-    weight: 60
+    weight: 70
 
 sidebar:
   - identifier: more

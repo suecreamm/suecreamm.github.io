@@ -1,17 +1,23 @@
-/* Global text size */
+/* =========================================================
+   Global text size
+   ========================================================= */
+
 html {
   font-size: 14px;
 }
 
-/* Body text */
 body {
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
-/* Headings */
+
+/* =========================================================
+   Headings
+   ========================================================= */
+
 h1 {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 h2 {
@@ -22,56 +28,16 @@ h3 {
   font-size: 1.35rem;
 }
 
-/* Hero section title */
+
+/* =========================================================
+   Hero
+   ========================================================= */
+
 .hero-title,
 .hero h1 {
   font-size: 2.2rem;
 }
 
-/* Project/card titles */
-.card-title,
-.article-title {
-  font-size: 1.15rem;
-}
-
-/* Project/card summary */
-.card-text,
-.article-style {
-  font-size: 0.95rem;
-}
-
-/* -------- Home arrangement --------- */
-/* Explore section */
-#explore section > div > div:last-child {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 3rem;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Center feature contents */
-#explore section > div > div:last-child > div {
-  text-align: center;
-}
-
-/* Center icons */
-#explore section > div > div:last-child > div > div:first-child {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Mobile: one centered column */
-@media (max-width: 767px) {
-  #explore section > div > div:last-child {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    gap: 3rem;
-  }
-}
-
-/* ---- Too Large ---- */
 .home-hero h1 {
   font-size: clamp(2.8rem, 5vw, 4.8rem) !important;
   line-height: 1.05 !important;
@@ -90,7 +56,62 @@ h3 {
   font-size: clamp(1.15rem, 1.7vw, 1.6rem);
 }
 
-/* ============== Inline code ============== */
+
+/* =========================================================
+   Cards
+   ========================================================= */
+
+.card-title,
+.article-title {
+  font-size: 1.15rem;
+}
+
+.card-text,
+.article-style {
+  font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   Home arrangement
+   ========================================================= */
+
+#explore section > div > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 3rem;
+
+  max-width: 900px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#explore section > div > div:last-child > div {
+  text-align: center;
+}
+
+#explore section > div > div:last-child > div > div:first-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  #explore section > div > div:last-child {
+    grid-template-columns: 1fr;
+
+    max-width: 420px;
+
+    gap: 3rem;
+  }
+}
+
+
+/* =========================================================
+   Inline code
+   ========================================================= */
+
 :not(pre) > code {
   padding: 0.12em 0.35em;
   margin: 0 0.04em;
@@ -99,24 +120,633 @@ h3 {
   font-weight: 500;
 
   color: inherit;
-  background-color: rgba(0, 0, 0, 0.055);
 
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color:
+    rgba(0, 0, 0, 0.055);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
   border-radius: 6px;
 
   white-space: nowrap;
 }
 
-/* Remove backticks */
 :not(pre) > code::before,
 :not(pre) > code::after {
   content: none !important;
 }
 
-/* Dark mode */
 .dark :not(pre) > code,
 [data-theme="dark"] :not(pre) > code {
   color: inherit;
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.12);
+
+  background-color:
+    rgba(255, 255, 255, 0.08);
+
+  border-color:
+    rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   Documentation width
+   ========================================================= */
+
+/*
+ * Only affects pages explicitly marked as docs by JS.
+ * It will NOT affect /works/.
+ */
+
+html.is-docs-page main article {
+  width: 100%;
+  max-width: 860px;
+}
+
+
+/* =========================================================
+   Brand palette (from icon.svg)
+   ========================================================= */
+
+:root {
+  --brand-navy: #07182F;
+  --brand-navy-soft: #12304F;   /* hover state for navy */
+  --brand-ivory: #FFF0C8;
+  --brand-ivory-deep: #F5DFA3;  /* hover state / border for ivory */
+  --brand-ivory-mark: #E3C47E;  /* ivory that stays visible on white */
+  --brand-cyan: #20E4E8;
+  --brand-cyan-deep: #12B8BC;   /* cyan that still reads on white */
+  --brand-cyan-text: #0B8A8E;   /* cyan for small text on white */
+
+  /* Hover color for links and hoverable text */
+  --hover-cyan: #12B8BC;
+  --brand-gold: #FFC83D;
+
+  /* Active item background (lighter than tags) */
+  --active-bg: rgba(255, 240, 200, 0.55);
+  --active-bg-dark: rgba(255, 240, 200, 0.07);
+
+  --toc-line: rgba(128, 128, 128, 0.22);
+}
+
+.dark {
+  --toc-line: rgba(255, 255, 255, 0.16);
+  --hover-cyan: #20E4E8;
+}
+
+
+/* =========================================================
+   Hugo Blox / README TOC
+   ========================================================= */
+
+.hb-scrollbar.sticky.top-16 {
+  padding-left: 1rem;
+  border-left: 1px solid var(--toc-line);
+  transition:
+    width 0.18s ease,
+    padding 0.18s ease,
+    background-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+/* Title */
+.hb-scrollbar.sticky.top-16 > p {
+  margin-bottom: 0.75rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.62;
+}
+
+/* List */
+.hb-scrollbar.sticky.top-16 > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hb-scrollbar.sticky.top-16 > ul > li {
+  position: relative;
+  margin: 0.15rem 0;
+}
+
+/* Links (horizontal padding on every item so the active box does not shift text) */
+.hb-scrollbar.sticky.top-16 a {
+  position: relative;
+  display: block;
+  padding: 0.18rem 0.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  opacity: 0.56;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.hb-scrollbar.sticky.top-16 a:hover {
+  opacity: 0.95;
+}
+
+/* H2 */
+.hb-scrollbar.sticky.top-16 a.font-semibold {
+  margin-top: 0.3rem;
+  font-weight: 600;
+  opacity: 0.76;
+}
+
+/* H3 */
+.hb-scrollbar.sticky.top-16 a.pl-4 {
+  padding-left: 1.3rem;
+  font-size: 0.84rem;
+}
+
+/* Active item (set by /js/toc-enhance.js): translucent ivory + navy text */
+.hb-scrollbar.sticky.top-16 a.toc-active {
+  opacity: 1 !important;
+  color: var(--brand-navy) !important;
+  background-color: var(--active-bg) !important;
+  font-weight: 600 !important;
+}
+
+.dark .hb-scrollbar.sticky.top-16 a.toc-active {
+  color: var(--brand-ivory) !important;
+  background-color: var(--active-bg-dark) !important;
+}
+
+
+/* =========================================================
+   Compact TOC rail + hover panel
+   ========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1450px) {
+
+  /* ---------- Collapsed rail ---------- */
+
+  .hb-scrollbar.sticky.top-16 {
+    width: 22px;
+    padding-left: 0;
+    overflow: visible !important;
+    border-left: none;
+    z-index: 50;
+  }
+
+  .hb-scrollbar.sticky.top-16 > p {
+    display: none;
+  }
+
+  .hb-scrollbar.sticky.top-16 > ul > li {
+    width: 22px;
+    height: 10px;
+    margin: 2px 0 !important;
+    padding: 0;
+  }
+
+  .hb-scrollbar.sticky.top-16 > ul > li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 7px;
+    height: 2px;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background: rgba(128, 128, 128, 0.42);
+    transition: width 0.15s ease, background-color 0.15s ease;
+  }
+
+  .hb-scrollbar.sticky.top-16 > ul > li:has(a.font-semibold)::before {
+    width: 10px;
+  }
+
+  .hb-scrollbar.sticky.top-16 > ul > li:has(a.toc-active)::before {
+    width: 17px;
+    background: var(--brand-ivory-mark);
+  }
+
+  .dark .hb-scrollbar.sticky.top-16 > ul > li:has(a.toc-active)::before {
+    background: var(--brand-ivory);
+  }
+
+  /* Hide text, keep click target */
+  .hb-scrollbar.sticky.top-16 a,
+  .hb-scrollbar.sticky.top-16 a.toc-active,
+  .dark .hb-scrollbar.sticky.top-16 a.toc-active {
+    position: absolute;
+    inset: 0;
+    padding: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    color: transparent !important;
+    background-color: transparent !important;
+    opacity: 0;
+  }
+
+  /* ---------- Expanded on hover ---------- */
+
+  .hb-scrollbar.sticky.top-16:hover {
+    width: 250px;
+    padding: 0.9rem 0.75rem;
+    overflow-y: auto !important;
+    border-left: 1px solid var(--toc-line);
+    border-radius: 0.6rem;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .hb-scrollbar.sticky.top-16:hover {
+    background: rgba(24, 24, 27, 0.98);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.36);
+  }
+
+  .hb-scrollbar.sticky.top-16:hover > p {
+    display: block;
+    padding-left: 0.5rem;
+  }
+
+  .hb-scrollbar.sticky.top-16:hover > ul > li {
+    width: auto;
+    height: auto;
+    margin: 0.15rem 0 !important;
+  }
+
+  .hb-scrollbar.sticky.top-16:hover > ul > li::before {
+    display: none;
+  }
+
+  .hb-scrollbar.sticky.top-16:hover a {
+    position: relative;
+    inset: auto;
+    display: block;
+    padding: 0.18rem 0.5rem !important;
+    font-size: 0.84rem !important;
+    line-height: 1.4 !important;
+    color: inherit !important;
+    background-color: transparent !important;
+    opacity: 0.56;
+  }
+
+  .hb-scrollbar.sticky.top-16:hover a.font-semibold {
+    font-weight: 600;
+    opacity: 0.76;
+  }
+
+  .hb-scrollbar.sticky.top-16:hover a.pl-4 {
+    padding-left: 1.3rem !important;
+  }
+
+  /* Active item inside hover panel */
+  .hb-scrollbar.sticky.top-16:hover a.toc-active {
+    opacity: 1 !important;
+    color: var(--brand-navy) !important;
+    background-color: var(--active-bg) !important;
+    font-weight: 600 !important;
+  }
+
+  .dark .hb-scrollbar.sticky.top-16:hover a.toc-active {
+    color: var(--brand-ivory) !important;
+    background-color: var(--active-bg-dark) !important;
+  }
+}
+
+
+/* =========================================================
+   Small screens
+   ========================================================= */
+
+@media (max-width: 1023px) {
+  /* Let Hugo Blox handle the mobile TOC layout */
+  .hb-scrollbar.sticky.top-16 {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+
+/* =========================================================
+   Callout (info box): ivory box + navy icon
+   Markup: div.flex.px-4.py-3.rounded-md.bg-primary-100
+   ========================================================= */
+
+div.flex.px-4.py-3.rounded-md.bg-primary-100 {
+  background-color: rgba(255, 240, 200, 0.7) !important;
+}
+
+div.flex.px-4.py-3.rounded-md.bg-primary-100 > span.text-primary-400 {
+  color: var(--brand-navy) !important;
+}
+
+.dark div.flex.px-4.py-3.rounded-md.bg-primary-100 {
+  background-color: rgba(255, 240, 200, 0.07) !important;
+}
+
+.dark div.flex.px-4.py-3.rounded-md.bg-primary-100 > span.text-primary-400 {
+  color: var(--brand-cyan) !important;
+}
+
+
+/* =========================================================
+   Docs sidebar: active page (same style as TOC active)
+   Markup: a.hb-sidebar-custom-link.sidebar-active-item
+   ========================================================= */
+
+a.hb-sidebar-custom-link.sidebar-active-item,
+a.hb-sidebar-custom-link.sidebar-active-item:hover {
+  color: var(--brand-navy) !important;
+  background-color: var(--active-bg) !important;
+}
+
+.dark a.hb-sidebar-custom-link.sidebar-active-item,
+.dark a.hb-sidebar-custom-link.sidebar-active-item:hover {
+  color: var(--brand-ivory) !important;
+  background-color: var(--active-bg-dark) !important;
+}
+
+
+/* =========================================================
+   Tags: ivory pill + navy text
+   Markup: a.no-underline.bg-primary-100.text-xs.rounded
+   ========================================================= */
+
+a.no-underline.bg-primary-100.text-primary-800.text-xs.rounded {
+  color: var(--brand-navy) !important;
+  background-color: var(--brand-ivory) !important;
+  transition: background-color 0.15s ease;
+}
+
+a.no-underline.bg-primary-100.text-primary-800.text-xs.rounded:hover {
+  background-color: var(--brand-ivory-deep) !important;
+}
+
+.dark a.no-underline.bg-primary-100.text-primary-800.text-xs.rounded {
+  color: var(--brand-ivory) !important;
+  background-color: rgba(255, 240, 200, 0.10) !important;
+}
+
+.dark a.no-underline.bg-primary-100.text-primary-800.text-xs.rounded:hover {
+  background-color: rgba(255, 240, 200, 0.20) !important;
+}
+
+
+/* =========================================================
+   Section eyebrow label (e.g. "Electron-Phonon Coupling with EPW")
+   Markup: div.uppercase.tracking-wide.text-primary-700.font-semibold
+   ========================================================= */
+
+div.uppercase.tracking-wide.text-primary-700.font-semibold {
+  color: var(--brand-cyan-text) !important;
+}
+
+.dark div.uppercase.tracking-wide.text-primary-700.font-semibold {
+  color: var(--brand-cyan) !important;
+}
+
+
+/* =========================================================
+   Feature icon circle: navy circle + cyan icon (favicon look)
+   Markup: div.rounded-full.bg-primary-100.text-primary-600
+   ========================================================= */
+
+div.rounded-full.bg-primary-100.text-primary-600 {
+  color: var(--brand-cyan) !important;
+  background-color: var(--brand-navy) !important;
+}
+
+.dark div.rounded-full.bg-primary-100.text-primary-600 {
+  color: var(--brand-cyan) !important;
+  background-color: rgba(32, 228, 232, 0.10) !important;
+  box-shadow: inset 0 0 0 1px rgba(32, 228, 232, 0.25);
+}
+
+
+/* =========================================================
+   Primary CTA button (e.g. "Explore Works"): navy + cyan
+   Markup: a.rounded-md.bg-primary-600.text-white.shadow-sm
+   ========================================================= */
+
+a.rounded-md.bg-primary-600.text-white.shadow-sm {
+  color: var(--brand-cyan) !important;
+  background-color: var(--brand-navy) !important;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.rounded-md.bg-primary-600.text-white.shadow-sm:hover {
+  background-color: var(--brand-navy-soft) !important;
+}
+
+a.rounded-md.bg-primary-600.text-white.shadow-sm:focus-visible {
+  outline-color: var(--brand-cyan) !important;
+}
+
+/* Dark: keep navy, add a thin cyan ring so it does not sink into the page */
+.dark a.rounded-md.bg-primary-600.text-white.shadow-sm {
+  box-shadow: inset 0 0 0 1px rgba(32, 228, 232, 0.35);
+}
+
+.dark a.rounded-md.bg-primary-600.text-white.shadow-sm:hover {
+  box-shadow: inset 0 0 0 1px rgba(32, 228, 232, 0.7);
+}
+
+
+/* =========================================================
+   Global hover: theme blue -> cyan
+   Catches Tailwind classes like hover:text-primary-600,
+   dark:hover:text-primary-400, group-hover:text-primary-500 ...
+   Components styled above keep their own hover rules.
+   ========================================================= */
+
+/* Text */
+[class*="hover:text-primary"]:hover,
+.group:hover [class*="group-hover:text-primary"] {
+  color: var(--hover-cyan) !important;
+}
+
+/* Background: quiet navy/white wash (Notion-style), not a colored tint */
+[class*="hover:bg-primary"]:hover,
+.group:hover [class*="group-hover:bg-primary"] {
+  background-color: rgba(7, 24, 47, 0.045) !important;
+}
+
+.dark [class*="hover:bg-primary"]:hover,
+.dark .group:hover [class*="group-hover:bg-primary"] {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Border */
+[class*="hover:border-primary"]:hover {
+  border-color: var(--brand-cyan) !important;
+}
+
+
+/* =========================================================
+   Hyperlinks in content: hover blue -> cyan
+   Tags, buttons and the sidebar keep their own colors
+   (their selectors are more specific).
+   ========================================================= */
+
+.prose a:hover,
+.article-style a:hover,
+main article a:hover {
+  color: var(--hover-cyan) !important;
+  text-decoration-color: var(--hover-cyan) !important;
+}
+
+
+/* =========================================================
+   Footer: license text link + Creative Commons icons
+   Light: muted navy / Dark: muted ivory / Hover: cyan
+   ========================================================= */
+
+footer a,
+.powered-by a {
+  color: var(--brand-navy) !important;
+  text-decoration-color: rgba(7, 24, 47, 0.3) !important;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+footer a:hover,
+.powered-by a:hover {
+  color: var(--hover-cyan) !important;
+  text-decoration-color: var(--hover-cyan) !important;
+}
+
+/* CC icons: quieter than text */
+.footer-license-icons a {
+  opacity: 0.45;
+}
+
+.footer-license-icons a:hover {
+  opacity: 1;
+}
+
+.footer-license-icons i {
+  color: inherit !important;
+}
+
+/* Dark mode */
+.dark footer a,
+.dark .powered-by a {
+  color: var(--brand-ivory) !important;
+  text-decoration-color: rgba(255, 240, 200, 0.3) !important;
+}
+
+.dark footer a:hover,
+.dark .powered-by a:hover {
+  color: var(--hover-cyan) !important;
+  text-decoration-color: var(--hover-cyan) !important;
+}
+
+.dark .footer-license-icons a {
+  opacity: 0.35;
+}
+
+.dark .footer-license-icons a:hover {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   Footer plain text ("Published with ...", copyright)
+   Same muted tone as the links so nothing stands out
+   ========================================================= */
+
+.powered-by {
+  color: rgba(7, 24, 47, 0.6) !important;
+}
+
+.dark .powered-by {
+  color: rgba(255, 240, 200, 0.5) !important;
+}
+
+
+/* =========================================================
+   Blog list card: hover box + "Read more"
+   The span.z-20 is only the invisible click area.
+   The visible box is its sibling layer (absolute, z-0),
+   shown by the theme on .group:hover.
+   ========================================================= */
+
+/* "Read more" label */
+.group .relative.z-10.flex.items-center.text-primary-500 {
+  color: var(--hover-cyan) !important;
+}
+
+
+/* =========================================================
+   Home: Recent Updates block (#recent)
+   ========================================================= */
+
+/* Side padding + readable width (the hover box extends 1rem
+   beyond each item, so padding must be larger than that) */
+/* !important: the block's design.spacing writes an inline
+   style="padding: ..." that would otherwise override this */
+#recent {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+#recent > * {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  #recent {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+  }
+}
+
+/* Space between items */
+#recent article + article {
+  margin-top: 0.5rem;
+}
+
+/* ---------- Auto thumbnail (added by /js/recent-thumbs.js) ---------- */
+
+#recent .group.has-thumb {
+  position: relative;
+  padding-right: 6.5rem;
+  min-height: 5rem;
+}
+
+#recent .recent-thumb {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 10;              /* below the z-20 click area, so the card stays clickable */
+  width: 5.5rem;
+  height: 5.5rem;
+  transform: translateY(-50%);
+  object-fit: cover;
+  border-radius: 0.6rem;
+  background-color: var(--active-bg);
+  box-shadow: inset 0 0 0 1px rgba(7, 24, 47, 0.08);
+}
+
+.dark #recent .recent-thumb {
+  background-color: var(--active-bg-dark);
+}
+
+@media (min-width: 640px) {
+  #recent .group.has-thumb {
+    padding-right: 11rem;
+  }
+
+  #recent .recent-thumb {
+    width: 9.5rem;
+    height: 6.25rem;
+  }
+}
+
+/* Keep the hover box (which extends 1rem past each item)
+   from creating horizontal scroll on narrow screens */
+#recent article,
+#recent .group {
+  max-width: 100%;
+  min-width: 0;
 }

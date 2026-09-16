@@ -1,0 +1,19 @@
+{{ $repo := .Get "repo" }}
+{{ $branch := .Get "branch" | default "main" }}
+{{ $path := .Get "path" | default "" }}
+
+<div
+  class="github-readme-component"
+  data-repo="{{ $repo }}"
+  data-branch="{{ $branch }}"
+  data-path="{{ $path }}"
+>
+  <div class="github-readme-body">
+    Loading project documentation...
+  </div>
+</div>
+
+<link rel="stylesheet" href="/css/github-readme.css">
+
+<script  src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="/js/github-readme.js"></script>

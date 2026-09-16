@@ -4,7 +4,8 @@ date: 2026-09-01
 weight: 50
 commentable: true
 sidebar:
-  open: true
+  open: false
+toc: true
 ---
 
 In this example, we perform a self-consistent field (SCF) calculation for graphene using QE.

@@ -1,0 +1,67 @@
+/* =========================================================
+   GitHub README content
+   ========================================================= */
+
+.github-readme-component {
+  position: relative;
+  width: 100%;
+}
+
+.github-readme-body {
+  min-width: 0;
+  width: 100%;
+}
+
+.github-readme-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+}
+
+.github-readme-body p,
+.github-readme-body li {
+  overflow-wrap: anywhere;
+}
+
+.github-readme-body table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.github-readme-body pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.github-readme-body h2,
+.github-readme-body h3,
+.github-readme-body h4 {
+  scroll-margin-top: 6.5rem;
+}
+
+
+/* =========================================================
+   README TOC positioning only
+   ========================================================= */
+
+.github-readme-toc-wrapper {
+  position: absolute;
+
+  top: 0;
+  left: calc(100% + 3rem);
+
+  width: 220px;
+
+  /*
+   * This gives sticky TOC a vertical containing block
+   * matching the README height.
+   */
+  height: 100%;
+}
+
+.github-readme-toc {
+  position: sticky !important;
+  top: 4rem;
+}

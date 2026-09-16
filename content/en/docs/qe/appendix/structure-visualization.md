@@ -1,6 +1,7 @@
 ---
 title: "A. Visualizing Atomic Structures"
 date: 2024-03-31
+lastmod: 2026-09-15
 summary: "A short tutorial on opening crystal structures in VESTA, adjusting the displayed range, and configuring bonds and polyhedral representations."
 weight: 9010
 commentable: true
@@ -10,7 +11,7 @@ tags:
   - Materials Project
   - VASP
 sidebar:
-    open: true
+    open: false
 ---
 
 ## 1. Initial Setup
@@ -31,12 +32,17 @@ Search for **graphene** on Materials Project and select the structure you want t
   <img
     src="/images/tutorials/vesta/01_graphene_materials_project_search.webp"
     alt="Searching for graphene on Materials Project"
-    style="width: 80%; max-width: 700px;">
+    style="width: 100%; max-width: 500px;">
 </p>
 
 Download the structure file in **POSCAR** format.
 
-![Downloading the graphene POSCAR from Materials Project](/images/tutorials/vesta/02_graphene_materials_project_download.webp)
+<p align="center">
+  <img
+    src="/images/tutorials/vesta/02_graphene_materials_project_download.webp"
+    alt="Downloading the graphene POSCAR from Materials Project"
+    style="width: 100%; max-width: 650px;">
+</p>
 
 ### 2.2 Open the Structure in VESTA
 
@@ -48,7 +54,12 @@ C.poscar -> C.vasp
 
 Then launch VESTA and drag the `C.vasp` file onto the empty VESTA window.
 
-![Graphene structure opened in VESTA](/images/tutorials/vesta/03_graphene_open_in_vesta.webp)
+<p align="center">
+  <img
+    src="/images/tutorials/vesta/03_graphene_open_in_vesta.webp"
+    alt="Graphene structure opened in VESTA"
+    style="width: 100%; max-width: 650px;">
+</p>
 
 ### 2.3 Adjust the Displayed Unit-Cell Range
 
@@ -67,7 +78,12 @@ y(max): 2
 
 This changes **only the range displayed on the screen**. It does not modify the actual lattice vectors or create a physical supercell.
 
-![VESTA interface showing the Style panel, view toolbar, and menu bar](/images/tutorials/vesta/04_vesta_interface_boundary_bonds.webp)
+<p align="center">
+  <img
+    src="/images/tutorials/vesta/04_vesta_interface_boundary_bonds.webp"
+    alt="VESTA interface showing the Style panel, view toolbar, and menu bar"
+    style="width: 100%; max-width: 650px;">
+</p>
 
 The numbered labels in the figure indicate the VESTA interface areas used in this tutorial.
 
@@ -136,8 +152,12 @@ Set the maximum bond length so that the nearest O atoms around Ti are included, 
 ```text
 Show polyhedra
 ```
-
-![Ti-O bond settings for constructing oxygen polyhedra around Ti](/images/tutorials/vesta/06_catio3_bond_settings.webp)
+<p align="center">
+  <img
+    src="/images/tutorials/vesta/06_catio3_bond_settings.webp"
+    alt="Ti-O bond settings for constructing oxygen polyhedra around Ti"
+    style="width: 100%; max-width: 600px;">
+</p>
 
 ---
 
@@ -157,8 +177,12 @@ Line 9-...   Atomic coordinates
 
 The number of coordinate lines, from Line 9 to the end of the file, must match the total number of atoms given above, i.e. the sum of the values in Line 7.
 
-![Main components of a graphene POSCAR file](/images/tutorials/vesta/07_poscar_file_structure.webp)
-
+<p align="center">
+  <img
+    src="/images/tutorials/vesta/07_poscar_file_structure.webp"
+    alt="Main components of a graphene POSCAR file"
+    style="width: 100%; max-width: 650px;">
+</p>
 ### Direct Coordinates
 
 In `Direct` format, atomic positions are expressed as fractional coordinates with respect to the lattice vectors in Lines 3-5.

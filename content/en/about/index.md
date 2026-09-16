@@ -24,4 +24,5 @@ I also develop small tools and workflows for scientific computing, analysis, and
 ## Computational Tools
 
 **Materials:** Quantum ESPRESSO, VASP, EPW, Wannier90, Yambo
+
 **Computing:** Python, Qiskit, Git, Linux/HPC, Web development

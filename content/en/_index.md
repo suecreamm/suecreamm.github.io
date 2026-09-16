@@ -22,7 +22,7 @@ sections:
       order: desc
       filters:
         folders:
-          - works
+          - work
         exclude_future: true
       archive:
         enable: false

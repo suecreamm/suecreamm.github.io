@@ -65,3 +65,23 @@
   position: sticky !important;
   top: 4rem;
 }
+
+/* =========================================================
+   README math (KaTeX)
+   ========================================================= */
+
+.github-readme-body .readme-math-display {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.github-readme-body .katex {
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.github-readme-body .katex-display {
+  margin: 1em 0;
+}

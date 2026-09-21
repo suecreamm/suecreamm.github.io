@@ -75,13 +75,16 @@
 
   function slugify(text) {
 
+    /*
+     * Same rule as GitHub, so links written in the
+     * README (e.g. #phonon-linewidth--electronphonon-coupling)
+     * keep working on the site.
+     */
     return text
-      .toLowerCase()
       .trim()
-      .replace(/[–—]/g, "-")
-      .replace(/[^\w\s-]/g, "")
-      .replace(/\s+/g, "-")
-      .replace(/-+/g, "-");
+      .toLowerCase()
+      .replace(/[^\p{L}\p{M}\p{N}\p{Pc}\s-]/gu, "")
+      .replace(/\s/g, "-");
 
   }
 
@@ -170,8 +173,13 @@
       `#${heading.id}`;
 
 
-    link.textContent =
-      heading.textContent;
+    /*
+     * Copy the heading's nodes (not textContent) so
+     * rendered math shows up correctly in the TOC.
+     */
+    heading.childNodes.forEach(
+      node => link.appendChild(node.cloneNode(true))
+    );
 
 
     /*
@@ -516,6 +524,43 @@ function buildReadmeTOC(
 
   /*
    * =========================================================
+   * Raw HTML link paths
+   * =========================================================
+   *
+   * <a href="figure.png"> inside raw HTML blocks is not seen
+   * by the Marked link renderer, so point it at GitHub here.
+   */
+
+  function fixHTMLLinkPaths(
+    markdown,
+    githubBase
+  ) {
+
+    return markdown.replace(
+      /<a([^>]*?)href=["']([^"']+)["']([^>]*?)>/g,
+      (match, before, href, after) => {
+
+        if (
+          /^(https?:|mailto:|#|\/)/.test(href)
+        ) {
+          return match;
+        }
+
+        return (
+          `<a${before}` +
+          `href="${githubBase + href}"` +
+          ` target="_blank" rel="noopener noreferrer"` +
+          `${after}>`
+        );
+
+      }
+    );
+
+  }
+
+
+  /*
+   * =========================================================
    * Hash navigation
    * =========================================================
    */
@@ -551,6 +596,302 @@ function buildReadmeTOC(
     target.scrollIntoView({
       behavior: "auto",
       block: "start"
+    });
+
+  }
+
+
+
+  /*
+   * =========================================================
+   * Math: protect before Marked, restore after, render KaTeX
+   * =========================================================
+   *
+   * Marked runs before KaTeX, so without this step it eats
+   * math syntax: "_" and "*" become <em>/<strong>, "\\" and
+   * "\{" lose their backslash, etc. We swap every formula for
+   * an opaque placeholder, let Marked parse the Markdown, then
+   * put the original TeX back and render it.
+   *
+   * Supported (same as GitHub, plus \( \) and \[ \]):
+   *   $...$   $$...$$   $`...`$   ```math ... ```
+   *   \(...\) \[...\]
+   */
+
+  const MATH_OPEN = "\uE000";
+  const MATH_CLOSE = "\uE001";
+  const MATH_TOKEN_RE = /\uE000(\d+)\uE001/g;
+
+  const KATEX_CDN = "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/";
+
+
+  function protectMath(src) {
+
+    const store = [];
+    const n = src.length;
+    let out = "";
+    let i = 0;
+    let atLineStart = true;
+
+    function token(tex, display, original) {
+      store.push({ tex, display, original });
+      return MATH_OPEN + (store.length - 1) + MATH_CLOSE;
+    }
+
+    /* Find an unescaped closing delimiter, skipping "\x" pairs. */
+    function findClose(from, delim, stopAtBlankLine, stopAtBacktick) {
+      let j = from;
+      while (j < n) {
+        const c = src[j];
+        if (stopAtBacktick && c === "`") {
+          return -1;
+        }
+        if (c === "\\" && delim !== "\\]" && delim !== "\\)") {
+          j += 2;
+          continue;
+        }
+        if (stopAtBlankLine && c === "\n" && /^\n[ \t]*\n/.test(src.slice(j, j + 50))) {
+          return -1;
+        }
+        if (src.startsWith(delim, j)) {
+          return j;
+        }
+        j++;
+      }
+      return -1;
+    }
+
+    while (i < n) {
+
+      const ch = src[i];
+
+      /* Fenced code blocks (```math becomes display math). */
+      if (atLineStart) {
+        const m = /^( {0,3})(`{3,}|~{3,})([^\n]*)(\n|$)/.exec(src.slice(i));
+        if (m) {
+          const fence = m[2];
+          const info = m[3].trim().toLowerCase();
+          const bodyStart = i + m[0].length;
+          const closeRe = new RegExp(
+            "^ {0,3}" + (fence[0] === "`" ? "`" : "~") +
+            "{" + fence.length + ",}[ \\t]*$", "m"
+          );
+          const cm = closeRe.exec(src.slice(bodyStart));
+          const bodyEnd = cm ? bodyStart + cm.index : n;
+          const blockEnd = cm ? bodyEnd + cm[0].length : n;
+
+          if (info === "math") {
+            out += "\n" + token(src.slice(bodyStart, bodyEnd), true, src.slice(i, blockEnd)) + "\n";
+          } else {
+            out += src.slice(i, blockEnd);
+          }
+          i = blockEnd;
+          atLineStart = false;
+          continue;
+        }
+      }
+
+      /* GitHub inline form: $`...`$ */
+      if (ch === "$" && src[i + 1] === "`") {
+        const run = /^`+/.exec(src.slice(i + 1))[0];
+        const close = src.indexOf(run, i + 1 + run.length);
+        if (close !== -1 && src[close + run.length] === "$" && src[close + run.length] !== "`") {
+          const end = close + run.length + 1;
+          out += token(src.slice(i + 1 + run.length, close), false, src.slice(i, end));
+          i = end;
+          atLineStart = false;
+          continue;
+        }
+      }
+
+      /* Inline code spans: copy verbatim. */
+      if (ch === "`") {
+        const run = /^`+/.exec(src.slice(i))[0];
+        let j = i + run.length;
+        let close = -1;
+        while ((j = src.indexOf(run, j)) !== -1) {
+          if (src[j + run.length] !== "`" && src[j - 1] !== "`") {
+            close = j;
+            break;
+          }
+          j += run.length;
+        }
+        const end = close === -1 ? i + run.length : close + run.length;
+        out += src.slice(i, end);
+        i = end;
+        atLineStart = false;
+        continue;
+      }
+
+      /* Backslash: \[ \] and \( \) math, or a normal escape. */
+      if (ch === "\\") {
+        const next = src[i + 1];
+        if (next === "[" || next === "(") {
+          const delim = next === "[" ? "\\]" : "\\)";
+          const close = findClose(i + 2, delim, next === "(");
+          if (close !== -1 && close > i + 2) {
+            const end = close + 2;
+            out += token(src.slice(i + 2, close), next === "[", src.slice(i, end));
+            i = end;
+            atLineStart = false;
+            continue;
+          }
+        }
+        out += src.slice(i, i + 2);
+        i += 2;
+        atLineStart = false;
+        continue;
+      }
+
+      /* $$ ... $$ display math. */
+      if (ch === "$" && src[i + 1] === "$") {
+        const close = findClose(i + 2, "$$", false);
+        if (close !== -1) {
+          const end = close + 2;
+          out += token(src.slice(i + 2, close), true, src.slice(i, end));
+          i = end;
+          atLineStart = false;
+          continue;
+        }
+      }
+
+      /* $ ... $ inline math (GitHub-style rules). */
+      if (ch === "$" && src[i + 1] && !/\s|\$/.test(src[i + 1])) {
+        let j = i + 1;
+        let close = -1;
+        while ((j = findClose(j, "$", true, true)) !== -1) {
+          if (!/\s/.test(src[j - 1]) && !/\d/.test(src[j + 1] || "")) {
+            close = j;
+            break;
+          }
+          j++;
+        }
+        if (close !== -1) {
+          const end = close + 1;
+          out += token(src.slice(i + 1, close), false, src.slice(i, end));
+          i = end;
+          atLineStart = false;
+          continue;
+        }
+      }
+
+      out += ch;
+      atLineStart = ch === "\n";
+      i++;
+
+    }
+
+    return { markdown: out, store };
+
+  }
+
+
+  function restoreMath(container, store) {
+
+    /* Text nodes: placeholder -> <span class="readme-math"> */
+    const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) {
+      if (walker.currentNode.nodeValue.includes(MATH_OPEN)) {
+        nodes.push(walker.currentNode);
+      }
+    }
+
+    nodes.forEach(node => {
+      const text = node.nodeValue;
+      const insideCode = node.parentElement && node.parentElement.closest("pre, code");
+      const frag = document.createDocumentFragment();
+      let last = 0;
+      let m;
+      MATH_TOKEN_RE.lastIndex = 0;
+
+      while ((m = MATH_TOKEN_RE.exec(text))) {
+        frag.append(text.slice(last, m.index));
+        const item = store[Number(m[1])];
+
+        if (!item || insideCode) {
+          frag.append(item ? item.original : m[0]);
+        } else {
+          const el = document.createElement("span");
+          el.className = item.display ? "readme-math readme-math-display" : "readme-math";
+          el.dataset.tex = item.tex;
+          el.textContent = item.original;
+          frag.append(el);
+        }
+        last = m.index + m[0].length;
+      }
+
+      frag.append(text.slice(last));
+      node.replaceWith(frag);
+    });
+
+    /* Attributes (e.g. alt text): put the original source back. */
+    container.querySelectorAll("*").forEach(el => {
+      Array.from(el.attributes).forEach(attr => {
+        if (attr.value.includes(MATH_OPEN)) {
+          el.setAttribute(
+            attr.name,
+            attr.value.replace(MATH_TOKEN_RE, (all, k) => (store[Number(k)] || {}).original || all)
+          );
+        }
+      });
+    });
+
+  }
+
+
+  let katexPromise = null;
+
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement("script");
+      s.src = src;
+      s.onload = resolve;
+      s.onerror = () => reject(new Error("Failed to load " + src));
+      document.head.appendChild(s);
+    });
+  }
+
+  /* Use the theme's KaTeX if present, otherwise load it from a CDN. */
+  function ensureKatex() {
+    if (window.katex && typeof window.katex.render === "function") {
+      return Promise.resolve(window.katex);
+    }
+    if (!katexPromise) {
+      const css = document.createElement("link");
+      css.rel = "stylesheet";
+      css.href = KATEX_CDN + "katex.min.css";
+      document.head.appendChild(css);
+      katexPromise = loadScript(KATEX_CDN + "katex.min.js").then(() => window.katex);
+    }
+    return katexPromise;
+  }
+
+
+  async function renderMath(container) {
+
+    const targets = container.querySelectorAll(".readme-math");
+    if (!targets.length) {
+      return;
+    }
+
+    let katex;
+    try {
+      katex = await ensureKatex();
+    } catch (error) {
+      console.error("github-readme: KaTeX unavailable", error);
+      return;
+    }
+
+    targets.forEach(el => {
+      try {
+        katex.render(el.dataset.tex, el, {
+          displayMode: el.classList.contains("readme-math-display"),
+          throwOnError: false
+        });
+      } catch (error) {
+        console.error("github-readme: math error", error);
+      }
     });
 
   }
@@ -677,10 +1018,19 @@ function buildReadmeTOC(
         );
 
 
+      const protectedMath =
+        protectMath(
+          originalMarkdown
+        );
+
+
       const markdown =
-        fixHTMLImagePaths(
-          originalMarkdown,
-          urls.rawBase
+        fixHTMLLinkPaths(
+          fixHTMLImagePaths(
+            protectedMath.markdown,
+            urls.rawBase
+          ),
+          urls.githubBase
         );
 
 
@@ -700,9 +1050,14 @@ function buildReadmeTOC(
           }
         );
 
+      restoreMath(
+        content,
+        protectedMath.store
+      );
+
       addHeadingIds(content);
 
-      renderDynamicMath(content);
+      await renderMath(content);
 
       buildReadmeTOC(
         component,
@@ -780,68 +1135,3 @@ function buildReadmeTOC(
   );
 
 })();
-
-function renderDynamicMath(container) {
-
-  /*
-   * KaTeX auto-render
-   */
-  if (
-    typeof window.renderMathInElement === "function"
-  ) {
-
-    window.renderMathInElement(
-      container,
-      {
-        delimiters: [
-          {
-            left: "$$",
-            right: "$$",
-            display: true
-          },
-          {
-            left: "\\[",
-            right: "\\]",
-            display: true
-          },
-          {
-            left: "$",
-            right: "$",
-            display: false
-          },
-          {
-            left: "\\(",
-            right: "\\)",
-            display: false
-          }
-        ],
-
-        throwOnError: false
-      }
-    );
-
-    return;
-  }
-
-
-  /*
-   * MathJax fallback
-   */
-  if (
-    window.MathJax &&
-    typeof window.MathJax.typesetPromise ===
-      "function"
-  ) {
-
-    window.MathJax
-      .typesetPromise([container])
-      .catch(error => {
-        console.error(
-          "Math rendering failed:",
-          error
-        );
-      });
-
-  }
-
-}

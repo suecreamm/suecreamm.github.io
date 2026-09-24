@@ -1,5 +1,5 @@
 ---
-title: Electron–Phonon Coupling with EPW
+title: Electron–Phonon Coupling Calculations with EPW
 summary: First-principles electron–phonon calculations using Quantum ESPRESSO and EPW, including phonon dispersion, Eliashberg spectral functions, electron self-energy, linewidths, and carrier lifetimes.
 date: 2026-09-08
 

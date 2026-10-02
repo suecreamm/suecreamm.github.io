@@ -11,6 +11,7 @@ tags:
 
 image:
   preview_only: true
+  
 ---
 
 [View Source Code on GitHub ↗](https://github.com/suecreamm/materials/tree/main/04Pb/calc)

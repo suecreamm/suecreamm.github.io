@@ -30,13 +30,13 @@ This tutorial covers the basic workflow for performing Density Functional Theory
 
 {{< cards >}}
 
-{{< card url="example/graphene-scf" title="1. Graphene SCF Calculation" icon="custom/solid-calculator" >}}
+{{< card url="example/graphene-scf" title="1. SCF" icon="custom/solid-calculator" >}}
 
-{{< card url="example/graphene-bands" title="2. Graphene Band Structure" icon="custom/solid-signal" >}}
+{{< card url="example/graphene-bands" title="2. Band Structure" icon="custom/solid-signal" >}}
 
-{{< card url="" title="3. Graphene Density of States" icon="custom/solid-table-cells-large" >}}
+{{< card url="example/graphene-pdos" title="3. Projected Density of States" icon="custom/solid-table-cells-large" >}}
 
-{{< card url="" title="4. Graphene Phonon Calculation (Phonopy)" icon="custom/solid-bacon" >}}
+{{< card url="" title="4. Phonon with Phonopy" icon="custom/solid-bacon" >}}
 
 {{< /cards >}}
 

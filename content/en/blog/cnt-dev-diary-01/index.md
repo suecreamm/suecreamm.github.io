@@ -14,13 +14,11 @@ tags:
 series:
   - Spicing-Up-Research-with-Code
 
-enableToc: true
-enableTocContent: true
 
 summary: A web-based tool for generating carbon nanotube structures in VASP POSCAR format. It automates geometric calculations and creates structures from a small number of user inputs without requiring local installation.
 ---
 
-![program_thumb](CNTnew_16_9.gif "program_thumb")
+![program_thumb](/uploads/post/CNTnew_16_9.gif "program_thumb")
 
 I created a web-based tool for generating CNT (carbon nanotube) structures in VASP POSCAR format. The generated coordinates can be saved as a `.vasp` file and visualized directly in VESTA.
 

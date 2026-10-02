@@ -1,5 +1,5 @@
 ---
-title: "Customizing Atomic Structures"
+title: "B. Customizing Atomic Structures"
 date: 2026-09-14
 summary: "A short tutorial on opening crystal structures in VESTA, adjusting the displayed range, and configuring bonds and polyhedral representations."
 weight: 9020

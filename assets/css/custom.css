@@ -676,7 +676,7 @@ footer a:hover,
 /* =========================================================
    Post lists with auto thumbnails
    Home:  #recent-work, #recent-updates
-   Works: #works-list
+   Works: #work-list
    Blog:  #blog-list
    ========================================================= */
 
@@ -684,12 +684,12 @@ footer a:hover,
    beyond each item, so padding must be larger than that) */
 /* !important: the block's design.spacing writes an inline
    style="padding: ..." that would otherwise override this */
-:is(#recent-work, #recent-updates, #works-list, #blog-list) {
+:is(#recent-work, #recent-updates, #work-list, #blog-list) {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
 }
 
-:is(#recent-work, #recent-updates, #works-list, #blog-list) > * {
+:is(#recent-work, #recent-updates, #work-list, #blog-list) > * {
   box-sizing: border-box;
   width: 100%;
   max-width: 860px;
@@ -698,26 +698,26 @@ footer a:hover,
 }
 
 @media (min-width: 640px) {
-  :is(#recent-work, #recent-updates, #works-list, #blog-list) {
+  :is(#recent-work, #recent-updates, #work-list, #blog-list) {
     padding-left: 2.5rem !important;
     padding-right: 2.5rem !important;
   }
 }
 
 /* Space between items */
-:is(#recent-work, #recent-updates, #works-list, #blog-list) article + article {
+:is(#recent-work, #recent-updates, #work-list, #blog-list) article + article {
   margin-top: 0.5rem;
 }
 
 /* ---------- Auto thumbnail (added by /js/recent-thumbs.js) ---------- */
 
-:is(#recent-work, #recent-updates, #works-list, #blog-list) .group.has-thumb {
+:is(#recent-work, #recent-updates, #work-list, #blog-list) .group.has-thumb {
   position: relative;
   padding-right: 6.5rem;
   min-height: 5rem;
 }
 
-:is(#recent-work, #recent-updates, #works-list, #blog-list) .recent-thumb {
+:is(#recent-work, #recent-updates, #work-list, #blog-list) .recent-thumb {
   position: absolute;
   top: 50%;
   right: 0;
@@ -731,16 +731,16 @@ footer a:hover,
   box-shadow: inset 0 0 0 1px rgba(7, 24, 47, 0.08);
 }
 
-.dark :is(#recent-work, #recent-updates, #works-list, #blog-list) .recent-thumb {
+.dark :is(#recent-work, #recent-updates, #work-list, #blog-list) .recent-thumb {
   background-color: var(--active-bg-dark);
 }
 
 @media (min-width: 640px) {
-  :is(#recent-work, #recent-updates, #works-list, #blog-list) .group.has-thumb {
+  :is(#recent-work, #recent-updates, #work-list, #blog-list) .group.has-thumb {
     padding-right: 11rem;
   }
 
-  :is(#recent-work, #recent-updates, #works-list, #blog-list) .recent-thumb {
+  :is(#recent-work, #recent-updates, #work-list, #blog-list) .recent-thumb {
     width: 9.5rem;
     height: 6.25rem;
   }
@@ -748,8 +748,8 @@ footer a:hover,
 
 /* Keep the hover box (which extends 1rem past each item)
    from creating horizontal scroll on narrow screens */
-:is(#recent-work, #recent-updates, #works-list, #blog-list) article,
-:is(#recent-work, #recent-updates, #works-list, #blog-list) .group {
+:is(#recent-work, #recent-updates, #work-list, #blog-list) article,
+:is(#recent-work, #recent-updates, #work-list, #blog-list) .group {
   max-width: 100%;
   min-width: 0;
 }

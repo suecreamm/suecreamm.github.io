@@ -1,7 +1,7 @@
 /*
  * Auto thumbnails for post lists:
  *   - Home:  #recent-work, #recent-updates
- *   - Works: #works-list
+ *   - Work: #work-list
  *   - Blog:  #blog-list
  *
  * For each item in the blocks:
@@ -15,7 +15,7 @@
 (function () {
   "use strict";
 
-  const ROOT_SELECTOR = "#recent-work, #recent-updates, #works-list, #blog-list";
+  const ROOT_SELECTOR = "#recent-work, #recent-updates, #work-list, #blog-list";
   const CACHE_KEY = "recent-thumbs:v3";
   const MAX_PARALLEL = 3;
 

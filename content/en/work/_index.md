@@ -1,5 +1,5 @@
 ---
-title: Works
+title: Work
 type: landing
 
 sections:
@@ -14,7 +14,7 @@ sections:
         padding: ["3rem", "1.25rem", "0", "1.25rem"]
 
   - block: collection
-    id: works-list
+    id: work-list
     content:
       title: ""
       text: ""
@@ -23,7 +23,7 @@ sections:
       order: desc
       filters:
         folders:
-          - works
+          - work
         exclude_future: true
       archive:
         enable: false

@@ -212,3 +212,11 @@ This will come in handy when you want to customize the structure.
 
 
 ---
+
+## Next
+
+{{< cards >}}
+
+{{< card url="appendix/structure-customization" title="Customizing Atomic Structures" icon="custom/solid-lock-open" >}}
+
+{{< /cards >}}

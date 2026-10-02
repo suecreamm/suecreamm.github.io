@@ -5,10 +5,9 @@ type: landing
 sections:
   - block: markdown
     content:
-      title: Selected Works
+      title: Computational Works
       text: |
-        Selected computational projects, scientific software,
-        and technical work.
+        A small selection of computational projects, technical studies, and scientific tools.
     design:
       spacing:
         padding: ["3rem", "1.25rem", "0", "1.25rem"]

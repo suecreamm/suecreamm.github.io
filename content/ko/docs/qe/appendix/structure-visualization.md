@@ -176,3 +176,12 @@ $$
 - **빨강 1: Objects panel:** VESTA에서는 **Objects** 아래에 구조의 atom이 표시된다.
 - **빨강 2: atom list:** POSCAR의 첫 번째 coordinate line은 VESTA의 첫 번째 atom entry, 이 예제에서는 **C1**, 에 대응된다.
 
+---
+
+## Next
+
+{{< cards >}}
+
+{{< card url="appendix/structure-customization" title="Customizing Atomic Structures" icon="custom/solid-lock-open" >}}
+
+{{< /cards >}}

@@ -9,4 +9,4 @@ jsconfig.json
 node_modules
 .env
 
-./*.svg
+./*.svg.DS_Store

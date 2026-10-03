@@ -1,6 +1,6 @@
 ---
 title: "B. Customizing Atomic Structures"
-date: 2026-09-14
+date: 2026-09-30
 lastmod: 2026-10-01
 summary: "A practical tutorial on modifying existing crystal structures in VESTA, including coordinate transformations and atomic translations for creating configurations such as AA and AB stacking."
 weight: 9020
@@ -19,22 +19,32 @@ Structures needed for calculations are not always available in the exact form we
 As a simple example, we will start from a graphene unit cell, create bilayer graphene, and adjust the relative position of one layer to construct **AA and AB stacking**.
 The goal of this tutorial is not simply to copy a particular set of coordinates, but to learn
 
-> **how to understand an existing structure, calculate the required translation, and apply it to create the structure you want**
+> how to understand an existing structure, calculate the required translation, and apply it to create the structure **you want**
 
 ---
 
 ## Hexagonal Lattice Worksheet
-
+<p>
+<img src="https://raw.githubusercontent.com/suecreamm/materials/main/01graphene/hexagonal_lattice.jpg"
+     alt="Hexagonal lattice worksheet"
+     style="width: 40%; max-width: 400px; min-width: 160px; height: auto; float: left; margin: 0 24px 12px 0;">
+     
 When calculating coordinates or translation vectors for hexagonal structures, I often use the worksheet below. I did not create this figure specifically for this tutorial. It is a reference I prepared and uploaded to my repository because I repeatedly use it when working with hexagonal cells.
 [**Hexagonal lattice worksheet**](https://github.com/suecreamm/materials/blob/main/01graphene/hexagonal_lattice.jpg)
-![Hexagonal lattice worksheet](https://raw.githubusercontent.com/suecreamm/materials/main/01graphene/hexagonal_lattice.jpg)
+</p>
 
 ---
 
 ## 1. The $1:\sqrt{3}:2$ Triangle
 
+<p>
+  <img src="/images/tutorials/appendix/1-2-root3_right_triangle.webp"
+     alt="30°–60°–90° right triangle with the 1-sqrt(3)-2 side ratio"
+     style="width: 40%; max-width: 250px; min-width: 160px; height: auto; float: left; margin: 0 24px 12px 0;">
+</p>
+
 A hexagonal lattice can be divided into equilateral triangles. Dividing an equilateral triangle in half gives a $30^\circ$-$60^\circ$-$90^\circ$ right triangle, whose side lengths have the ratio $1:\sqrt{3}:2$. This is a simple geometric relationship, but it is the one I use most often when working with the worksheet.
-![30°–60°–90° right triangle with the 1-sqrt(3)-2 side ratio](../1-2-root3_right_triangle.webp)
+
 This relationship is repeatedly useful when decomposing distances in a hexagonal structure into Cartesian $x$ and $y$ components.
 For graphene, the lattice constant $a$ and the nearest-neighbor C–C distance $d_{\mathrm{C-C}}$ are related by
 
@@ -131,12 +141,11 @@ Therefore, no in-plane translation is required, and the lattice vectors do not n
 The AA-stacked structure can be constructed as follows.
 
 ```text
-C
+AAstacking
 1.0
         2.4410462379         0.0000000000         0.0000000000
        -1.2205234005         2.1140078914         0.0000000000
         0.0000000000         0.0000000000        20.0000000000
-
 C
 4
 Direct
@@ -282,12 +291,11 @@ In other words, the lower layer remains unchanged, while the same in-plane trans
 The final AB-stacked structure is as follows.
 
 ```text
-C
+ABstacking
 1.0
         2.4410462379         0.0000000000         0.0000000000
        -1.2205234005         2.1140078914         0.0000000000
         0.0000000000         0.0000000000        20.0000000000
-
 C
 4
 Direct
@@ -328,6 +336,12 @@ The lattice vectors remain identical; only the relative position of the upper la
 ---
 
 ## 9. Check the Structure in VESTA
+
+<p>
+  <img src="/images/tutorials/appendix/AA-AB-stacking.webp"
+       alt="AA and AB stacking in bilayer graphene"
+       style="width: 40%; max-width: 250px; min-width: 160px; height: auto; float: left; margin: 0 24px 12px 0;">
+</p>
 
 Open the completed AA and AB files in VESTA and inspect the structures.
 When AA stacking is viewed along the $c$ axis, the carbon atoms in the upper and lower layers should overlap.

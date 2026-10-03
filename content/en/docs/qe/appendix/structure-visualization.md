@@ -61,7 +61,16 @@ Then launch VESTA and drag the `C.vasp` file onto the empty VESTA window.
     style="width: 100%; max-width: 650px;">
 </p>
 
+
+<p>
+
 ### 2.3 Adjust the Displayed Unit-Cell Range
+
+
+<img
+  src="/images/tutorials/vesta/04_vesta_interface_boundary_bonds.webp"
+  alt="VESTA interface showing boundary, bond, and structural model controls"
+  style="width: 80%; max-width: 550px; height: auto; float: left; margin: 0 24px 12px 0;">
 
 Open the following menu located at the bottom left of Box 1:
 
@@ -78,18 +87,13 @@ y(max): 2
 
 This changes **only the range displayed on the screen**. It does not modify the actual lattice vectors or create a physical supercell.
 
-<p align="center">
-  <img
-    src="/images/tutorials/vesta/04_vesta_interface_boundary_bonds.webp"
-    alt="VESTA interface showing the Style panel, view toolbar, and menu bar"
-    style="width: 100%; max-width: 650px;">
-</p>
-
 The numbered labels in the figure indicate the VESTA interface areas used in this tutorial.
 
-- **Box 1: Style panel:** Adjust the displayed range under **Boundary...**
-- **Box 2: View/orientation toolbar:** Use the lattice-axis and rotation tools to inspect the structure from different directions.
-- **Box 3: Menu bar:** Define or modify bonds under **Edit -> Bonds**.
+- **Box 1:** [Style panel] Adjust the displayed range under **Boundary...**
+- **Box 2:** [View/orientation toolbar] Use the lattice-axis and rotation tools to inspect the structure from different directions.
+- **Box 3:** [Menu bar] Define or modify bonds under **[Edit] -> [Bonds]**.
+
+</p>
 
 ### 2.4 Define C-C Bonds
 
@@ -116,7 +120,14 @@ Choose a bond-length range that includes the nearest-neighbor C-C distance, then
 
 Following the same procedure as above, search for **CaTiO3** on Materials Project. Download the POSCAR file and open it in VESTA.
 
+<p>
+
 ### 3.2 Use the Polyhedral View
+
+<img
+  src="/images/tutorials/vesta/05_catio3_polyhedral_view.webp"
+  alt="CaTiO3 structure in polyhedral representation with the VESTA interface"
+  style="width: 85%; max-width: 600px; height: auto; float: left; margin: 0 24px 12px 0;">
 
 Select the following style:
 
@@ -124,15 +135,26 @@ Select the following style:
 Style -> Polyhedral
 ```
 
-![CaTiO3 structure in polyhedral representation with the VESTA interface](/images/tutorials/vesta/05_catio3_polyhedral_view.webp)
-
 The same numbered labels are used here.
 
-- **Box 1: Style panel:** Select **Polyhedral**.
-- **Box 2: View/orientation toolbar:** Rotate the structure or align it along a specific lattice direction.
-- **Box 3: Menu bar:** Open **[Edit] -> [Bonds]** when defining the coordination environment.
+- **Box 1:** [Style panel] Select **Polyhedral**.
+- **Box 2:** [View/orientation toolbar] Rotate the structure or align it along a specific lattice direction.
+- **Box 3:** [Menu bar Open] **[Edit] -> [Bonds]** when defining the coordination environment.
+
+
+---
+
+</p>
+
+
+<p>
 
 ### 3.3 Define Ti-O Bonds
+
+  <img
+    src="/images/tutorials/vesta/06_catio3_bond_settings.webp"
+    alt="Ti-O bond settings for constructing oxygen polyhedra around Ti"
+    style="width: 80%; max-width: 550px; height: auto; float: left; margin: 0 24px 12px 0;">
 
 Open:
 
@@ -152,14 +174,11 @@ Set the maximum bond length so that the nearest O atoms around Ti are included, 
 ```text
 Show polyhedra
 ```
-<p align="center">
-  <img
-    src="/images/tutorials/vesta/06_catio3_bond_settings.webp"
-    alt="Ti-O bond settings for constructing oxygen polyhedra around Ti"
-    style="width: 100%; max-width: 600px;">
-</p>
 
 ---
+
+</p>
+
 
 ## 4. Reading a VASP Structure File
 
@@ -183,6 +202,7 @@ The number of coordinate lines, from Line 9 to the end of the file, must match t
     alt="Main components of a graphene POSCAR file"
     style="width: 100%; max-width: 650px;">
 </p>
+
 ### Direct Coordinates
 
 In `Direct` format, atomic positions are expressed as fractional coordinates with respect to the lattice vectors in Lines 3-5.
@@ -203,12 +223,11 @@ $$
 
 ![Mapping POSCAR atomic coordinates to atom entries in VESTA](/images/tutorials/vesta/08_poscar_to_vesta_mapping.webp)
 
-
 This will come in handy when you want to customize the structure.
 
 - **Blue:** The number of coordinate rows in the POSCAR must match the atom count given above.
-- **Red 1: Objects button:** This displays a list of the atomic coordinates from the text file, as shown above.
-- **Red 2: Atom list:** The first coordinate line in the POSCAR corresponds to the first atom entry in VESTA, which is **C1** in this example.
+- **Red 1:** [Objects button] This displays a list of the atomic coordinates from the text file, as shown above.
+- **Red 2:** [Atom list] The first coordinate line in the POSCAR corresponds to the first atom entry in VESTA, which is **C1** in this example.
 
 
 ---

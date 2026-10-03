@@ -1,11 +1,10 @@
 ---
-
 title: Quantum ESPRESSO Hands-on Tutorial (Graphene)
 date: 2025-04-08
 weight: 30
 sidebar:
 open: true
-----------
+---
 
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -46,6 +45,6 @@ This tutorial covers the basic workflow for performing Density Functional Theory
 
 {{< card url="appendix/structure-visualization" title="Visualizing Atomic Structures" icon="custom/solid-atom" >}}
 
-{{< card url="appendix/structure-customization" title="Customizing Atomic Structures" icon="custom/solid-lock-open" >}}
+{{< card url="appendix/structure-build" title="Rebuilding Atomic Structures" icon="custom/solid-lock-open" >}}
 
 {{< /cards >}}

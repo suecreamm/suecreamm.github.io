@@ -1,5 +1,5 @@
 ---
-title: "B. Customizing Atomic Structures"
+title: "B. Rebuilding Atomic Structures"
 date: 2026-09-30
 lastmod: 2026-10-01
 summary: "A practical tutorial on modifying existing crystal structures in VESTA, including coordinate transformations and atomic translations for creating configurations such as AA and AB stacking."
@@ -67,8 +67,8 @@ vi hexagonal_cell.vasp
 ```text
 C
 1.0
-        2.4410462379         0.0000000000         0.0000000000
-       -1.2205234005         2.1140078914         0.0000000000
+        2.4600000000         0.0000000000         0.0000000000
+       -1.2300000000         2.1304224933         0.0000000000
         0.0000000000         0.0000000000        20.0000000000
 
 C
@@ -78,24 +78,44 @@ Direct
         0.333333333          0.666666667          0.500000000
 ```
 
+The same structure in Cartesian coordinates is
+
+```text
+C
+1.0
+        2.4600000000         0.0000000000         0.0000000000
+       -1.2300000000         2.1304224933         0.0000000000
+        0.0000000000         0.0000000000        20.0000000000
+
+C
+2
+Cartesian
+        0.000000000          0.000000000         10.000000000
+        0.000000000          1.420281663         10.000000000
+```
+
+Direct coordinates $\mathbf{f}=(u,v,w)$ are converted to Cartesian coordinates using
+
+$$\mathbf{r}=u\mathbf{a}_1+v\mathbf{a}_2+w\mathbf{a}_3.$$
+
 The two in-plane lattice vectors are
 
-$$\mathbf{a}_1 = (2.4410,\ 0,\ 0)$$
+$$\mathbf{a}_1 = (2.4600,\ 0,\ 0)$$
 
 and
 
-$$\mathbf{a}_2 = (-1.2205,\ 2.1140,\ 0)$$
+$$\mathbf{a}_2 = (-1.2300,\ 2.1304,\ 0)$$
 
 respectively.
 The length of each vector is approximately
 
-$$a=2.4410~\text{Å}$$
+$$a=2.4600~\text{Å}$$
 
 Using the $1:\sqrt{3}:2$ relationship introduced above,
 
-$$d_{\mathrm{C-C}} = \frac{2.4410}{\sqrt{3}} \approx 1.4093~\text{Å}.$$
+$$d_{\mathrm{C-C}} = \frac{2.4600}{\sqrt{3}} \approx 1.4203~\text{Å} \approx 1.42~\text{Å}.$$
 
-Thus, the nearest-neighbor C–C distance in this structure is approximately $1.409$ Å.
+Thus, the nearest-neighbor C–C distance in this structure is approximately $1.42$ Å.
 
 ---
 
@@ -143,8 +163,8 @@ The AA-stacked structure can be constructed as follows.
 ```text
 AAstacking
 1.0
-        2.4410462379         0.0000000000         0.0000000000
-       -1.2205234005         2.1140078914         0.0000000000
+        2.4600000000         0.0000000000         0.0000000000
+       -1.2300000000         2.1304224933         0.0000000000
         0.0000000000         0.0000000000        20.0000000000
 C
 4
@@ -153,6 +173,23 @@ Direct
         0.333333333          0.666666667          0.416250000
         0.000000000          0.000000000          0.583750000
         0.333333333          0.666666667          0.583750000
+```
+
+The same AA-stacked structure in Cartesian coordinates is
+
+```text
+AAstacking
+1.0
+        2.4600000000         0.0000000000         0.0000000000
+       -1.2300000000         2.1304224933         0.0000000000
+        0.0000000000         0.0000000000        20.0000000000
+C
+4
+Cartesian
+        0.000000000          0.000000000          8.325000000
+        0.000000000          1.420281663          8.325000000
+        0.000000000          0.000000000         11.675000000
+        0.000000000          1.420281663         11.675000000
 ```
 
 The first two atoms belong to the lower layer, and the last two atoms belong to the upper layer.
@@ -195,7 +232,7 @@ To transform AA stacking into AB stacking, **there is no need to change the in-p
 Now, let us calculate the required translation directly.
 The current lattice constant is
 
-$$a=2.4410462379~\text{Å}$$
+$$a=2.4600000000~\text{Å}$$
 
 Using the $1:\sqrt{3}:2$ relationship, the nearest-neighbor C–C distance is
 
@@ -203,7 +240,7 @@ $$d_{\mathrm{C-C}} = \frac{a}{\sqrt{3}}$$
 
 so
 
-$$d_{\mathrm{C-C}} = \frac{2.4410}{\sqrt{3}} \approx 1.4093~\text{Å}.$$
+$$d_{\mathrm{C-C}} = \frac{2.4600}{\sqrt{3}} \approx 1.4203~\text{Å} \approx 1.42~\text{Å}.$$
 
 With the current lattice-vector convention, we can use the following fractional translation:
 
@@ -215,19 +252,19 @@ $$\Delta\mathbf{r} = \frac{1}{3}\mathbf{a}_1 + \frac{2}{3}\mathbf{a}_2$$
 
 Therefore,
 
-$$\Delta\mathbf{r} = \frac{1}{3} (2.4410,0,0) + \frac{2}{3} (-1.22052,2.1140,0).$$
+$$\Delta\mathbf{r} = \frac{1}{3} (2.4600,0,0) + \frac{2}{3} (-1.2300,2.1304,0).$$
 
 The $x$ component is
 
-$$\Delta x = \frac{2.4410}{3} - \frac{2(1.2205)}{3} \approx0$$
+$$\Delta x = \frac{2.4600}{3} - \frac{2(1.2300)}{3} \approx0$$
 
 and the $y$ component is
 
-$$\Delta y = \frac{2}{3}(2.11400) \approx 1.4093~\text{Å}$$
+$$\Delta y = \frac{2}{3}(2.13042) \approx 1.4203~\text{Å} \approx 1.42~\text{Å}$$
 
 Therefore,
 
-$$\boxed{ \Delta\mathbf{r} \approx (0,\ 1.4093,\ 0)~\text{Å} }$$
+$$\boxed{ \Delta\mathbf{r} \approx (0,\ 1.4203,\ 0)~\text{Å} }$$
 
 Interestingly, this value is identical to the C–C bond length obtained earlier using the $1:\sqrt{3}:2$ triangle.
 In other words, the hand-drawn hexagonal geometry and the calculation based on the actual lattice vectors give the same result.
@@ -293,8 +330,8 @@ The final AB-stacked structure is as follows.
 ```text
 ABstacking
 1.0
-        2.4410462379         0.0000000000         0.0000000000
-       -1.2205234005         2.1140078914         0.0000000000
+        2.4600000000         0.0000000000         0.0000000000
+       -1.2300000000         2.1304224933         0.0000000000
         0.0000000000         0.0000000000        20.0000000000
 C
 4
@@ -303,6 +340,23 @@ Direct
         0.333333333          0.666666667          0.416250000
         0.333333333          0.666666667          0.583750000
         0.666666667          0.333333333          0.583750000
+```
+
+The same AB-stacked structure in Cartesian coordinates is
+
+```text
+ABstacking
+1.0
+        2.4600000000         0.0000000000         0.0000000000
+       -1.2300000000         2.1304224933         0.0000000000
+        0.0000000000         0.0000000000        20.0000000000
+C
+4
+Cartesian
+        0.000000000          0.000000000          8.325000000
+        0.000000000          1.420281663          8.325000000
+        0.000000000          1.420281663         11.675000000
+        1.230000000          0.710140831         11.675000000
 ```
 
 The difference becomes clear when AA and AB stacking are compared directly.

@@ -223,7 +223,7 @@ $$
 
 ![Mapping POSCAR atomic coordinates to atom entries in VESTA](/images/tutorials/vesta/08_poscar_to_vesta_mapping.webp)
 
-This will come in handy when you want to customize the structure.
+This will come in handy when you want to rebuild the structure.
 
 - **Blue:** The number of coordinate rows in the POSCAR must match the atom count given above.
 - **Red 1:** [Objects button] This displays a list of the atomic coordinates from the text file, as shown above.
@@ -236,6 +236,6 @@ This will come in handy when you want to customize the structure.
 
 {{< cards >}}
 
-{{< card url="appendix/structure-customization" title="Customizing Atomic Structures" icon="custom/solid-lock-open" >}}
+{{< card url="appendix/structure-build" title="Rebuilding Atomic Structures" icon="custom/solid-lock-open" >}}
 
 {{< /cards >}}

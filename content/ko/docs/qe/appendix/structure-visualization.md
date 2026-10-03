@@ -182,6 +182,6 @@ $$
 
 {{< cards >}}
 
-{{< card url="appendix/structure-customization" title="Customizing Atomic Structures" icon="custom/solid-lock-open" >}}
+{{< card url="appendix/structure-build" title="Rebuilding Atomic Structures" icon="custom/solid-lock-open" >}}
 
 {{< /cards >}}

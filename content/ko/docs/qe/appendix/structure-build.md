@@ -1,5 +1,5 @@
 ---
-title: "B. Customizing Atomic Structures"
+title: "B. Rebuilding Atomic Structures"
 date: 2026-09-14
 lastmod: 2026-10-01
 summary: "A practical tutorial on modifying existing crystal structures in VESTA, including coordinate transformations and atomic translations for creating configurations such as AA and AB stacking."

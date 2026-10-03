@@ -15,6 +15,7 @@ sidebar:
 
 
 ### 계산 환경 구축하기
+
 {{< cards >}}
 {{< card url="env/questions" title="처음 시작하는 사람들이 가질만한 질문" icon="custom/solid-circle-question" >}}
 {{< card url="env/linux-basics" title="리눅스 기초 명령어" icon="custom/solid-terminal" >}}
@@ -23,6 +24,7 @@ sidebar:
 
 
 ### 실습 예제 (그래핀)
+
 {{< cards >}}
 {{< card url="example/graphene-scf" title="그래핀 SCF 계산" icon="custom/solid-calculator" >}}
 {{< card url="example/graphene-bands" title="그래핀 밴드 구조 계산" icon="custom/solid-signal" >}}
@@ -31,7 +33,8 @@ sidebar:
 {{< /cards >}}
 
 ### 부록
+
 {{< cards >}}
 {{< card url="appendix/structure-visualization" title="원자 구조 시각화하기" icon="custom/solid-atom" >}}
-{{< card url="appendix/structure-customization" title="원자 구조 내 마음대로 커스텀하기" icon="custom/solid-lock-open" >}}
+{{< card url="appendix/structure-build" title="원자 구조 내 마음대로 커스텀하기" icon="custom/solid-lock-open" >}}
 {{< /cards >}}

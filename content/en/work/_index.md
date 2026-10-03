@@ -5,7 +5,7 @@ type: landing
 sections:
   - block: markdown
     content:
-      title: Computational Works
+      title: Computational Work
       text: |
         A small selection of computational projects, technical studies, and scientific tools.
     design:
